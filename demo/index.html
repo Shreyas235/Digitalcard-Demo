@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas - Web Developer Digital Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Shreyas" class="logo">
+        </div>
+        <h1 class="company-name">Shreyas</h1>
+        <p class="tagline">Web Developer</p>
+    </header>
+
+    <!-- Quick Action Buttons -->
+    <section class="quick-actions">
+        <a href="tel:9901787660" class="action-btn call-btn">
+            <span class="icon">📞</span>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/919901787660" class="action-btn whatsapp-btn" target="_blank">
+            <span class="icon">💬</span>
+            <span>WhatsApp</span>
+        </a>
+        <a href="mailto:skowndinya518@gmail.com" class="action-btn email-btn">
+            <span class="icon">✉️</span>
+            <span>Email</span>
+        </a>
+        <button class="action-btn save-btn" onclick="downloadVCard()">
+            <span class="icon">💾</span>
+            <span>Save Contact</span>
+        </button>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="contact-item">
+            <div class="contact-label">Phone</div>
+            <a href="tel:9901787660" class="contact-value">9901787660</a>
+        </div>
+        <div class="contact-item">
+            <div class="contact-label">Email</div>
+            <a href="mailto:skowndinya518@gmail.com" class="contact-value">skowndinya518@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <div class="contact-label">WhatsApp</div>
+            <a href="https://wa.me/919901787660" class="contact-value" target="_blank">+91 9901787660</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            Passionate web developer specializing in creating modern, responsive, and user-friendly websites and web applications. With expertise in front-end and back-end technologies, I transform ideas into functional digital solutions. I focus on clean code, optimal performance, and delivering exceptional user experiences that help businesses grow online.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="products-section">
+        <h2 class="section-title">My Services</h2>
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Frontend Development</h3>
+                <p>HTML5, CSS3, JavaScript, React, Vue.js, Responsive Design</p>
+            </div>
+            <div class="skill-item">
+                <h3>Backend Development</h3>
+                <p>Node.js, PHP, Python, Database Management</p>
+            </div>
+            <div class="skill-item">
+                <h3>Tools & Technologies</h3>
+                <p>Git, VS Code, Webpack, npm, RESTful APIs</p>
+            </div>
+            <div class="skill-item">
+                <h3>Design & UI/UX</h3>
+                <p>Figma, Adobe XD, Bootstrap, Tailwind CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="service" required>
+                <option value="">Select a Service</option>
+                <option value="website-development">Website Development</option>
+                <option value="web-application">Web Application</option>
+                <option value="ecommerce">E-Commerce Solution</option>
+                <option value="landing-page">Landing Page</option>
+                <option value="portfolio">Portfolio Website</option>
+                <option value="consultation">Consultation</option>
+            </select>
+            <textarea name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Share Profile -->
+    <section class="share-section">
+        <h2 class="section-title">Share My Profile</h2>
+        <div class="share-buttons">
+            <button class="share-btn" onclick="shareProfile('whatsapp')">WhatsApp</button>
+            <button class="share-btn" onclick="shareProfile('facebook')">Facebook</button>
+            <button class="share-btn" onclick="shareProfile('twitter')">Twitter</button>
+            <button class="share-btn" onclick="shareProfile('linkedin')">LinkedIn</button>
+            <button class="share-btn" onclick="copyLink()">Copy Link</button>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <h2 class="section-title">Scan to Connect</h2>
+        <div class="qr-container">
+            <div id="qrCode"></div>
+            <p class="qr-text">Scan this QR code to quickly access my digital card</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Shreyas. All rights reserved.</p>
+        <p>Web Developer | Creating Digital Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

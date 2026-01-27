@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Raghavendra Canvassing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo-container">
+        <img
+          src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg"
+          alt="Shreyas"
+          class="logo"
+        />
+      </div>
+      <div class="tagline">
+        <h1 class="company-name">Sri Raghavendra Canvassing</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+      </div>
+    </header>
+
+    <!-- Quick Action Buttons Section -->
+    <section class="quick-actions">
+      <div class="quick-actions-header">
+        <img
+          src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg"
+          alt="Vegwings Logo"
+          class="profile-logo"
+        />
+        <h1 class="business-name">Raghavendra</h1>
+      </div>
+
+      <div class="action-grid">
+        <a href="tel:" class="action-btn blue-btn">
+          <span class="icon">📞</span>
+          <span>Call 1</span>
+        </a>
+        <a href="tel:" class="action-btn blue-btn">
+          <span class="icon">📞</span>
+          <span>Call 2</span>
+        </a>
+        <a
+          href="https://wa.me/91?text=Hello%20Raghavendra"
+          class="action-btn green-btn"
+          target="_blank"
+        >
+          <span class="icon">💬</span>
+          <span>Raghavendra</span>
+        </a>
+        <a
+          href="https://wa.me/91?text=Hello%20Raghavendra"
+          class="action-btn green-btn"
+          target="_blank"
+        >
+          <span class="icon">💬</span>
+          <span>Raghavendra</span>
+        </a>
+        <a href="mailto:abc@gmail.com" class="action-btn gray-btn">
+          <span class="icon">✉️</span>
+          <span>Email</span>
+        </a>
+        <button class="action-btn gray-btn" onclick="downloadVCard()">
+          <span class="icon">💾</span>
+          <span>Save Contact</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <a href="tel:" class="contact-value">9901787660</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <a href="mailto:" class="contact-value"
+          >abc@gmail.com</a
+        >
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">WhatsApp</div>
+        <a
+          href="https://wa.me/"
+          class="contact-value"
+          target="_blank"
+          >+91 9901787660</a
+        >
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="products-section">
+      <h2 class="section-title">Our Products</h2>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <h2 class="section-title">Get In Touch</h2>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="website-development">Website Development</option>
+          <option value="web-application">Web Application</option>
+          <option value="ecommerce">E-Commerce Solution</option>
+          <option value="landing-page">Landing Page</option>
+          <option value="portfolio">Portfolio Website</option>
+          <option value="consultation">Consultation</option>
+        </select>
+        <textarea
+          name="message"
+          placeholder="Tell me about your project..."
+          rows="4"
+          required
+        ></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Share Profile -->
+    <section class="share-section">
+      <h2 class="section-title">Share My Profile</h2>
+      <div class="share-buttons">
+        <button class="share-btn" onclick="shareProfile('whatsapp')">
+          WhatsApp
+        </button>
+        <button class="share-btn" onclick="shareProfile('facebook')">
+          Facebook
+        </button>
+        <button class="share-btn" onclick="shareProfile('twitter')">
+          Twitter
+        </button>
+        <button class="share-btn" onclick="shareProfile('linkedin')">
+          LinkedIn
+        </button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
+      </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+      <h2 class="section-title">Scan to Connect</h2>
+      <div class="qr-container">
+        <div id="qrCode"></div>
+        <p class="qr-text">
+          Scan this QR code to quickly access my digital card
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Shreyas. All rights reserved.</p>
+      <p>Web Developer | Creating Digital Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
