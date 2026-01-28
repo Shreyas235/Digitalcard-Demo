@@ -67,7 +67,7 @@ ORG:Sri Raghavendra Canvassing
 TEL;TYPE=CELL:9739413766
 EMAIL:sriraghavendracanvassing5@gmail.com
 URL:https://raghavendracanvasing.in/index.php
-NOTE:All Types of Rice
+NOTE:Quality Rice Products - All Types Available
 END:VCARD`;
 
         const blob = new Blob([vCardData], { type: 'text/vcard' });
@@ -133,7 +133,7 @@ function setupReviewAndQRInteractions() {
     const reviewCircle = document.querySelector('.review-circle');
     if (reviewCircle) {
         reviewCircle.addEventListener('click', function() {
-            const googleReviewURL = 'https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review';
+            const googleReviewURL = 'YOUR_GOOGLE_REVIEW_LINK_HERE';
             window.open(googleReviewURL, '_blank');
         });
     }
@@ -141,7 +141,7 @@ function setupReviewAndQRInteractions() {
     const instagramHandle = document.querySelector('.instagram-handle');
     if (instagramHandle) {
         instagramHandle.addEventListener('click', function() {
-            window.open('https://www.instagram.com/marsimpex_mass/', '_blank');
+            window.open('YOUR_INSTAGRAM_URL_HERE', '_blank');
         });
     }
 
@@ -149,7 +149,7 @@ function setupReviewAndQRInteractions() {
     if (qrCard) {
         qrCard.style.cursor = 'pointer';
         qrCard.addEventListener('click', function() {
-            window.open('https://www.instagram.com/marsimpex_mass/', '_blank');
+            window.open('YOUR_INSTAGRAM_URL_HERE', '_blank');
         });
     }
 }
@@ -183,7 +183,7 @@ function shareMore() {
     if (navigator.share) {
         navigator.share({
             title: 'Sri Raghavendra Canvassing',
-            text: 'Check out this business - All Types of Rice!',
+            text: 'Check out this business for quality rice products!',
             url: 'https://raghavendracanvasing.in'
         }).catch(err => console.log('Error sharing:', err));
     } else {
