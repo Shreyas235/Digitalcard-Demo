@@ -1,174 +1,332 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sri Raghavendra Canvassing</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header class="header">
-      <div class="logo-container">
-        <img
-          src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg"
-          alt="Shreyas"
-          class="logo"
-        />
-      </div>
-      <div class="tagline">
-        <h1 class="company-name">Sri Raghavendra Canvassing</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-      </div>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Raghavendra Canvassing - Contact Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+    <!-- Contact Card Section -->
+    <div class="contact-card">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="company-name">Sri Raghavendra Canvassing</h1>
+            <div class="divider"></div>
+            
+            <h2 class="contact-name">Primary Contact</h2>
+            <div class="divider"></div>
+            <p class="phone-main">9739413766</p>
+            
+            <button class="save-contact-btn" id="saveContactBtn">
+                <i class="fas fa-download"></i> Save Contact
+            </button>
+            
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="tel:9739413766" class="icon-link phone-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://wa.me/919739413766" class="icon-link whatsapp-icon" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:sriraghavendracanvassing5@gmail.com" class="icon-link email-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/dV3suFLp1poSfNAG7" class="icon-link maps-icon" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="https://raghavendracanvasing.in/index.php" class="icon-link website-icon" target="_blank">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://www.instagram.com/marsimpex_mass/" class="icon-link instagram-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <div class="detail-item">
+                <i class="fas fa-phone"></i>
+                <span>9739413766</span>
+            </div>
+            
+            <div class="detail-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>9739413766</span>
+            </div>
+            
+            <div class="detail-item">
+                <i class="fas fa-envelope"></i>
+                <span>sriraghavendracanvassing5@gmail.com</span>
+            </div>
+            
+            <div class="detail-item">
+                <i class="fas fa-globe"></i>
+                <span>raghavendracanvasing.in</span>
+            </div>
+            
+            <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>View Location on Map</span>
+            </div>
+        </div>
+    </div>
 
-    <!-- Quick Action Buttons Section -->
-    <section class="quick-actions">
-      <div class="quick-actions-header">
-        <img
-          src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg"
-          alt="Vegwings Logo"
-          class="profile-logo"
-        />
-        <h1 class="business-name">Raghavendra</h1>
-      </div>
+    <!-- Contact Section with Button, Review & QR -->
+    <section class="contact-section">
+        <!-- Contact Us Button -->
+        <div class="contact-button-wrapper">
+            <button class="contact-us-btn" onclick="handleContactClick()">
+                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-right"></i>
+                Contact us
+            </button>
+        </div>
 
-      <div class="action-grid">
-        <a href="tel:" class="action-btn blue-btn">
-          <span class="icon">📞</span>
-          <span>Call 1</span>
-        </a>
-        <a href="tel:" class="action-btn blue-btn">
-          <span class="icon">📞</span>
-          <span>Call 2</span>
-        </a>
-        <a
-          href="https://wa.me/91?text=Hello%20Raghavendra"
-          class="action-btn green-btn"
-          target="_blank"
-        >
-          <span class="icon">💬</span>
-          <span>Raghavendra</span>
-        </a>
-        <a
-          href="https://wa.me/91?text=Hello%20Raghavendra"
-          class="action-btn green-btn"
-          target="_blank"
-        >
-          <span class="icon">💬</span>
-          <span>Raghavendra</span>
-        </a>
-        <a href="mailto:abc@gmail.com" class="action-btn gray-btn">
-          <span class="icon">✉️</span>
-          <span>Email</span>
-        </a>
-        <button class="action-btn gray-btn" onclick="downloadVCard()">
-          <span class="icon">💾</span>
-          <span>Save Contact</span>
+        <!-- Google Review Badge -->
+        <div class="google-review-badge">
+            <div class="review-circle">
+                <p class="review-text">REVIEW US ON</p>
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" class="google-logo">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-code-section">
+            <div class="qr-code-card">
+                <div class="qr-code-container">
+                    <img src="qr-code.png" alt="QR Code" class="qr-image">
+                </div>
+                <div class="instagram-handle">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top-btn" id="scrollTopBtn">
+            <i class="fas fa-chevron-up"></i>
         </button>
-      </div>
+    </section>
+    
+    <!-- Profile Impressions Section -->
+    <section class="profile-section">
+        <div class="impressions-container">
+            <div class="wave-divider top-wave"></div>
+            <p class="impressions-label">Profile Impressions</p>
+            <div class="views-icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <p class="views-label">Total Views</p>
+            <div class="view-counter" id="viewCounter">
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+            </div>
+            <div class="wave-divider bottom-wave"></div>
+        </div>
+
+        <!-- Click here to Share -->
+        <div class="share-section">
+            <p class="share-text">Click here to Share</p>
+            <div class="social-share-icons">
+                <a href="https://wa.me/?text=Check%20out%20Sri%20Raghavendra%20Canvassing%20-%20All%20Types%20of%20Rice!%20Visit:%20https://raghavendracanvasing.in" class="share-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://raghavendracanvasing.in" class="share-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20Sri%20Raghavendra%20Canvassing%20-%20All%20Types%20of%20Rice!&url=https://raghavendracanvasing.in" class="share-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:?subject=Sri%20Raghavendra%20Canvassing&body=Check%20out%20this%20business:%20https://raghavendracanvasing.in" class="share-icon email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/marsimpex_mass/" class="share-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" class="share-icon youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://t.me/share/url?url=https://raghavendracanvasing.in&text=Check%20out%20Sri%20Raghavendra%20Canvassing" class="share-icon telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="share-icon more" onclick="shareMore(); return false;"><i class="fas fa-ellipsis-h"></i></a>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media-section">
+            <p class="social-media-text">Follow Us On</p>
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/marsimpex_mass/" class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:sriraghavendracanvassing5@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/919739413766" class="social-link whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info">
-      <div class="contact-item">
-        <div class="contact-label">Phone</div>
-        <a href="tel:" class="contact-value">9901787660</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Email</div>
-        <a href="mailto:" class="contact-value"
-          >abc@gmail.com</a
-        >
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">WhatsApp</div>
-        <a
-          href="https://wa.me/"
-          class="contact-value"
-          target="_blank"
-          >+91 9901787660</a
-        >
-      </div>
+    <!-- Our Items Section -->
+    <section class="items-section">
+        <h2 class="items-title">Our Items</h2>
+        <div class="items-menu">
+            <div class="menu-item" data-category="office-chairs">➤ Office Chairs</div>
+            <div class="menu-item" data-category="office-tables">➤ Office Tables</div>
+            <div class="menu-item" data-category="conference-tables">➤ Conference Tables</div>
+            <div class="menu-item" data-category="dining-tables">➤ Dining Tables</div>
+            <div class="menu-item" data-category="beds" class="active">➤ Beds</div>
+        </div>
     </section>
 
-    <!-- About Me Section -->
-    <section class="about-section">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-text">
-        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+    <!-- Product Galleries Section -->
+    <section class="products-container">
+        <!-- Office Chairs Gallery -->
+        <div class="gallery-section" id="office-chairs" style="display: none;">
+            <h2 class="gallery-title">Office Chairs</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+1" alt="Office Chair 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+2" alt="Office Chair 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+3" alt="Office Chair 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+4" alt="Office Chair 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+5" alt="Office Chair 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Office+Chair+6" alt="Office Chair 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Office Tables Gallery -->
+        <div class="gallery-section" id="office-tables" style="display: none;">
+            <h2 class="gallery-title">Office Tables</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+1" alt="Office Table 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+2" alt="Office Table 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+3" alt="Office Table 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+4" alt="Office Table 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+5" alt="Office Table 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Office+Table+6" alt="Office Table 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Conference Tables Gallery -->
+        <div class="gallery-section" id="conference-tables" style="display: none;">
+            <h2 class="gallery-title">Conference Tables</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+1" alt="Conference Table 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+2" alt="Conference Table 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+3" alt="Conference Table 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+4" alt="Conference Table 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+5" alt="Conference Table 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Conference+Table+6" alt="Conference Table 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Dining Tables Gallery -->
+        <div class="gallery-section" id="dining-tables" style="display: none;">
+            <h2 class="gallery-title">Dining Tables</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+1" alt="Dining Table 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+2" alt="Dining Table 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+3" alt="Dining Table 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+4" alt="Dining Table 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+5" alt="Dining Table 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Dining+Table+6" alt="Dining Table 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Beds Gallery -->
+        <div class="gallery-section" id="beds" style="display: block;">
+            <h2 class="gallery-title">Beds</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+1" alt="Bed 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+2" alt="Bed 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+3" alt="Bed 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+4" alt="Bed 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+5" alt="Bed 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+6" alt="Bed 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+7" alt="Bed 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+8" alt="Bed 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+9" alt="Bed 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200/8B7355/FFFFFF?text=Bed+10" alt="Bed 10">
+                </div>
+            </div>
+        </div>
     </section>
+    </div><!-- End main-container -->
 
-    <!-- Services Section -->
-    <section class="products-section">
-      <h2 class="section-title">Our Products</h2>
-      <div class="products-grid" id="productsGrid"></div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form-section">
-      <h2 class="section-title">Get In Touch</h2>
-      <form class="contact-form" id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="tel" name="phone" placeholder="Your Phone" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <select name="service" required>
-          <option value="">Select a Service</option>
-          <option value="website-development">Website Development</option>
-          <option value="web-application">Web Application</option>
-          <option value="ecommerce">E-Commerce Solution</option>
-          <option value="landing-page">Landing Page</option>
-          <option value="portfolio">Portfolio Website</option>
-          <option value="consultation">Consultation</option>
-        </select>
-        <textarea
-          name="message"
-          placeholder="Tell me about your project..."
-          rows="4"
-          required
-        ></textarea>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-    </section>
-
-    <!-- Share Profile -->
-    <section class="share-section">
-      <h2 class="section-title">Share My Profile</h2>
-      <div class="share-buttons">
-        <button class="share-btn" onclick="shareProfile('whatsapp')">
-          WhatsApp
-        </button>
-        <button class="share-btn" onclick="shareProfile('facebook')">
-          Facebook
-        </button>
-        <button class="share-btn" onclick="shareProfile('twitter')">
-          Twitter
-        </button>
-        <button class="share-btn" onclick="shareProfile('linkedin')">
-          LinkedIn
-        </button>
-        <button class="share-btn" onclick="copyLink()">Copy Link</button>
-      </div>
-    </section>
-
-    <!-- QR Code Section -->
-    <section class="qr-section">
-      <h2 class="section-title">Scan to Connect</h2>
-      <div class="qr-container">
-        <div id="qrCode"></div>
-        <p class="qr-text">
-          Scan this QR code to quickly access my digital card
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2025 Shreyas. All rights reserved.</p>
-      <p>Web Developer | Creating Digital Solutions</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
