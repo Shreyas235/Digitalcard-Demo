@@ -698,32 +698,34 @@ body {
     border-radius: 5px;
 }
 
-.enquire-btn {
+.enquire-btn-section {
     width: 100%;
-    margin-top: 10px;
-    padding: 10px 15px;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    padding: 15px 20px;
     background: #25D366;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
 }
 
-.enquire-btn:hover {
+.enquire-btn-section:hover {
     background: #128C7E;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
-.enquire-btn i {
-    font-size: 1.1rem;
+.enquire-btn-section i {
+    font-size: 1.3rem;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -821,6 +823,17 @@ body {
 
     .gallery-grid {
         gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .gallery-item {
+        padding: 8px;
+    }
+    
+    .enquire-btn-section {
+        font-size: 1rem;
+        padding: 12px 18px;
+        max-width: 350px;
     }
 }
 
@@ -890,6 +903,17 @@ body {
     }
 
     .gallery-grid {
-        gap: 10px;
+        gap: 12px;
+        padding: 0 5px;
+    }
+    
+    .gallery-item {
+        padding: 10px;
+    }
+    
+    .enquire-btn-section {
+        font-size: 0.95rem;
+        padding: 12px 16px;
+        max-width: 320px;
     }
 }
