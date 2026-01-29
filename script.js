@@ -3,7 +3,6 @@
 // Script is at bottom of HTML, so DOM is already ready
 displayVisitCount();
 setupScrollButton();
-setupProductMenu();
 setupGalleryItems();
 setupContactCardInteractions();
 setupReviewAndQRInteractions();
@@ -51,7 +50,7 @@ function animateDigit(digitElement, finalValue, delay) {
             } else {
                 currentValue++;
             }
-        }, 30);  // Faster animation (was 50ms, now 30ms)
+        }, 30);
     }, delay);
 }
 
@@ -127,6 +126,15 @@ function handleContactClick() {
     window.open(whatsappURL, '_blank');
 }
 
+// ==================== PRODUCT ENQUIRY ====================
+
+function enquireProduct(productName) {
+    const phoneNumber = '919739413766';
+    const message = `Hello! I'm interested in ${productName}. Please send me more details about this product.`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+}
+
 // ==================== REVIEW & QR INTERACTIONS ====================
 
 function setupReviewAndQRInteractions() {
@@ -191,38 +199,6 @@ function shareMore() {
     }
 }
 
-// ==================== PRODUCT MENU ====================
-
-function setupProductMenu() {
-    const menuItems = document.querySelectorAll('.menu-item');
-    const galleries = document.querySelectorAll('.gallery-section');
-    
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const category = item.getAttribute('data-category');
-            
-            menuItems.forEach(mi => mi.classList.remove('active'));
-            item.classList.add('active');
-            
-            galleries.forEach(gallery => {
-                gallery.style.display = 'none';
-            });
-            
-            const selectedGallery = document.getElementById(category);
-            if (selectedGallery) {
-                selectedGallery.style.display = 'block';
-                
-                setTimeout(() => {
-                    selectedGallery.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-                }, 100);
-            }
-        });
-    });
-}
-
 // ==================== GALLERY ITEMS ====================
 
 function setupGalleryItems() {
@@ -269,6 +245,7 @@ function openImageModal(src, title) {
             max-width: 90%;
             max-height: 90%;
             text-align: center;
+            padding-top: 60px;
         }
         
         .modal-content img {
@@ -280,17 +257,26 @@ function openImageModal(src, title) {
         
         .modal-close {
             position: absolute;
-            top: -40px;
+            top: 0;
             right: 0;
             color: white;
             font-size: 40px;
             cursor: pointer;
             transition: all 0.3s ease;
+            background: rgba(255, 68, 68, 0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            padding-bottom: 5px;
         }
         
         .modal-close:hover {
-            color: #ff4444;
-            transform: scale(1.2);
+            background: rgba(255, 68, 68, 1);
+            transform: scale(1.1);
         }
         
         .modal-title {
@@ -329,7 +315,7 @@ function addAnimations() {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    // Simple quick fade-in for contact card (no transform)
+    // Simple quick fade-in for contact card
     const contactCard = document.querySelector('.contact-card');
     if (contactCard) {
         contactCard.style.opacity = '1';
