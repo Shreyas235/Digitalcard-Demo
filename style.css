@@ -698,6 +698,18 @@ body {
     border-radius: 5px;
 }
 
+.gallery-item picture {
+    width: 100%;
+    display: block;
+}
+
+.gallery-item picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
 .enquire-btn-section {
     width: 100%;
     max-width: 400px;
@@ -832,8 +844,13 @@ body {
     
     .enquire-btn-section {
         font-size: 1rem;
-        padding: 12px 18px;
-        max-width: 350px;
+        padding: 14px 20px;
+        max-width: 90%;
+        margin: 25px auto 0 auto;
+    }
+    
+    .enquire-btn-section i {
+        font-size: 1.2rem;
     }
 }
 
@@ -913,7 +930,12 @@ body {
     
     .enquire-btn-section {
         font-size: 0.95rem;
-        padding: 12px 16px;
-        max-width: 320px;
+        padding: 13px 18px;
+        max-width: 95%;
+        margin: 20px auto 0 auto;
+    }
+    
+    .enquire-btn-section i {
+        font-size: 1.1rem;
     }
 }
