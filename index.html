@@ -10,116 +10,121 @@
 </head>
 <body>
     <div id="main-container">
-    <!-- Contact Card Section -->
-    <div class="contact-card">
-        <!-- Header Section -->
-        <div class="header">
-            <h1 class="company-name">Sri Raghavendra Canvassing</h1>
-            <div class="divider"></div>
-            
-            <h2 class="contact-name">Primary Contact</h2>
-            <div class="divider"></div>
-            <p class="phone-main">9739413766</p>
-            
-            <button class="save-contact-btn" id="saveContactBtn">
+    
+    <!-- New Contact Card Design -->
+    <div class="modern-contact-card">
+        <!-- Top Header -->
+        <div class="card-header">
+            <div class="header-left">
+                <img src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg" alt="Sri Raghavendra Canvassing Logo" class="header-logo">
+                <div class="header-info">
+                    <h1 class="header-title">Sri Raghavendra Canvasing</h1>
+                    <p class="header-subtitle">Digital Business Card</p>
+                </div>
+            </div>
+            <button class="share-btn" onclick="shareCard()">
+                <i class="fas fa-share-alt"></i>
+            </button>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner-section">
+            <img src="./images/background img.png" alt="Rice Fields Background" class="banner-bg">
+            <div class="banner-overlay">
+                <img src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg" alt="Company Logo" class="banner-logo">
+                <h2 class="banner-title">Sri Raghavendra Canvasing</h2>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="call-btn call-btn-1" onclick="makeCall('9739413766')">
+                <i class="fas fa-phone"></i> Call 1
+            </button>
+            <button class="call-btn call-btn-2" onclick="makeCall('9483533229')">
+                <i class="fas fa-phone"></i> Call 2
+            </button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="whatsapp-btn" onclick="openWhatsApp('919739413766', 'Vishal')">
+                <i class="fab fa-whatsapp"></i> Vishal
+            </button>
+            <button class="whatsapp-btn" onclick="openWhatsApp('919483533229', 'Kori Veeresha')">
+                <i class="fab fa-whatsapp"></i> Kori Veeresha
+            </button>
+        </div>
+
+        <div class="save-contact-wrapper">
+            <button class="save-contact-modern" onclick="saveContactModern()">
                 <i class="fas fa-download"></i> Save Contact
             </button>
-            
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="tel:9739413766" class="icon-link phone-icon">
+        </div>
+
+        <!-- Contact Details List -->
+        <div class="contact-list">
+            <div class="contact-item" onclick="makeCall('9739413766')">
+                <div class="contact-icon phone-icon">
                     <i class="fas fa-phone"></i>
-                </a>
-                <a href="https://wa.me/919739413766" class="icon-link whatsapp-icon" target="_blank">
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Phone 1</p>
+                    <p class="contact-value">9739413766</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="makeCall('9483533229')">
+                <div class="contact-icon phone-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Phone 2</p>
+                    <p class="contact-value">9483533229</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="openWhatsApp('919739413766', 'Vishal')">
+                <div class="contact-icon whatsapp-icon">
                     <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="mailto:sriraghavendracanvassing5@gmail.com" class="icon-link email-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://maps.app.goo.gl/dV3suFLp1poSfNAG7" class="icon-link maps-icon" target="_blank">
-                    <i class="fas fa-map-marker-alt"></i>
-                </a>
-                <a href="https://raghavendracanvasing.in/index.php" class="icon-link website-icon" target="_blank">
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Vishal (Primary)</p>
+                    <p class="contact-value">919739413766</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="openWhatsApp('919483533229', 'Kori Veeresha')">
+                <div class="contact-icon whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Kori Veeresha</p>
+                    <p class="contact-value">919483533229</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="openWebsite()">
+                <div class="contact-icon website-icon">
                     <i class="fas fa-globe"></i>
-                </a>
-                <a href="YOUR_INSTAGRAM_URL_HERE" class="icon-link instagram-icon" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Website</p>
+                    <p class="contact-value website-link">https://raghavendracanvasing.in/index.php</p>
+                </div>
             </div>
         </div>
-        
-        <!-- Contact Details Section -->
-        <div class="contact-details">
-            <div class="detail-item">
-                <i class="fas fa-phone"></i>
-                <span>9739413766</span>
+
+        <!-- About Us Section -->
+        <div class="about-section">
+            <div class="about-header">
+                <i class="fas fa-info-circle"></i>
+                <h3>About Us</h3>
             </div>
-            
-            <div class="detail-item">
-                <i class="fab fa-whatsapp"></i>
-                <span>9739413766</span>
-            </div>
-            
-            <div class="detail-item">
-                <i class="fas fa-envelope"></i>
-                <span>sriraghavendracanvassing5@gmail.com</span>
-            </div>
-            
-            <div class="detail-item">
-                <i class="fas fa-globe"></i>
-                <span>raghavendracanvasing.in</span>
-            </div>
-            
-            <div class="detail-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>View Location on Map</span>
-            </div>
+            <p class="about-text">
+                Welcome to Sri Raghavendra Canvasing, your trusted source for premium quality rice. We take pride in offering a diverse range of rice varieties that cater to the discerning tastes of our customers. With a commitment to quality, authenticity, and fair pricing, we have become a preferred choice for rice enthusiasts across the region.
+            </p>
         </div>
     </div>
-
-    <!-- Contact Section with Button, Review & QR -->
-    <section class="contact-section">
-        <!-- Contact Us Button -->
-        <div class="contact-button-wrapper">
-            <button class="contact-us-btn" onclick="handleContactClick()">
-                <i class="fas fa-chevron-right"></i>
-                <i class="fas fa-chevron-right"></i>
-                Contact us
-            </button>
-        </div>
-
-        <!-- Google Review Badge -->
-        <div class="google-review-badge">
-            <div class="review-circle">
-                <p class="review-text">REVIEW US ON</p>
-                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" class="google-logo">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- QR Code Section -->
-        <div class="qr-code-section">
-            <div class="qr-code-card">
-                <div class="qr-code-container">
-                    <img src="qr-code.png" alt="QR Code" class="qr-image">
-                </div>
-                <div class="instagram-handle">
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll to Top Button -->
-        <button class="scroll-top-btn" id="scrollTopBtn">
-            <i class="fas fa-chevron-up"></i>
-        </button>
-    </section>
     
     <!-- Profile Impressions Section -->
     <section class="profile-section">
@@ -415,9 +420,11 @@
             </button>
         </div>
     </section>
+    
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.7711274597436!2d76.6610567!3d12.2637618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6f007e9c873b%3A0xf43e46140bd2702b!2sSri%20Raghavendra%20Canvassing!5e0!3m2!1sen!2sin!4v1769664953434!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="location"></iframe>
     </div>
+    
     </div>
 </body>
 </html>

@@ -2,10 +2,7 @@
 
 // Script is at bottom of HTML, so DOM is already ready
 displayVisitCount();
-setupScrollButton();
 setupGalleryItems();
-setupContactCardInteractions();
-setupReviewAndQRInteractions();
 addAnimations();
 
 // ==================== VISIT COUNTER ====================
@@ -54,76 +51,79 @@ function animateDigit(digitElement, finalValue, delay) {
     }, delay);
 }
 
-// ==================== SAVE CONTACT BUTTON ====================
+// ==================== MODERN CONTACT CARD FUNCTIONS ====================
 
-const saveContactBtn = document.getElementById('saveContactBtn');
-if (saveContactBtn) {
-    saveContactBtn.addEventListener('click', function() {
-        const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:Sri Raghavendra Canvassing
-ORG:Sri Raghavendra Canvassing
-TEL;TYPE=CELL:9739413766
-EMAIL:sriraghavendracanvassing5@gmail.com
-URL:https://raghavendracanvasing.in/index.php
-NOTE:Quality Rice Products - All Types Available
-END:VCARD`;
-
-        const blob = new Blob([vCardData], { type: 'text/vcard' });
-        const url = window.URL.createObjectURL(blob);
-        
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Sri_Raghavendra_Canvassing.vcf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-    });
+// Make a phone call
+function makeCall(phoneNumber) {
+    window.location.href = `tel:${phoneNumber}`;
 }
 
-// ==================== CONTACT CARD INTERACTIONS ====================
-
-function setupContactCardInteractions() {
-    document.querySelectorAll('.detail-item').forEach(item => {
-        const icon = item.querySelector('i');
-        const text = item.querySelector('span').textContent;
-        
-        if (icon.classList.contains('fa-phone')) {
-            item.addEventListener('click', function() {
-                window.location.href = `tel:${text}`;
-            });
-        } 
-        else if (icon.classList.contains('fa-whatsapp')) {
-            item.addEventListener('click', function() {
-                window.open(`https://wa.me/91${text}`, '_blank');
-            });
-        } 
-        else if (icon.classList.contains('fa-envelope')) {
-            item.addEventListener('click', function() {
-                window.location.href = `mailto:${text}`;
-            });
-        } 
-        else if (icon.classList.contains('fa-globe')) {
-            item.addEventListener('click', function() {
-                window.open('https://raghavendracanvasing.in/index.php', '_blank');
-            });
-        } 
-        else if (icon.classList.contains('fa-map-marker-alt')) {
-            item.addEventListener('click', function() {
-                window.open('https://maps.app.goo.gl/dV3suFLp1poSfNAG7', '_blank');
-            });
-        }
-    });
-}
-
-// ==================== CONTACT US BUTTON ====================
-
-function handleContactClick() {
-    const phoneNumber = '919739413766';
-    const message = 'Hello! I would like to know more about your rice products.';
+// Open WhatsApp with a specific contact
+function openWhatsApp(phoneNumber, contactName) {
+    const message = `Hello ${contactName}! I would like to know more about your rice products.`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
+}
+
+// Open website
+function openWebsite() {
+    window.open('https://raghavendracanvasing.in/index.php', '_blank');
+}
+
+// Share the card
+function shareCard() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Sri Raghavendra Canvasing',
+            text: 'Check out this business for quality rice products!',
+            url: window.location.href
+        }).catch(err => console.log('Error sharing:', err));
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        const shareURL = window.location.href;
+        navigator.clipboard.writeText(shareURL).then(() => {
+            alert('Link copied to clipboard! Share it with others.');
+        }).catch(() => {
+            alert('Unable to share. Please copy the URL manually: ' + shareURL);
+        });
+    }
+}
+
+// Save contact as VCF
+function saveContactModern() {
+    const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Sri Raghavendra Canvasing
+ORG:Sri Raghavendra Canvasing
+TEL;TYPE=CELL:9739413766
+TEL;TYPE=CELL:9483533229
+X-WHATSAPP;TYPE=CELL:919739413766
+X-WHATSAPP;TYPE=CELL:919483533229
+URL:https://raghavendracanvasing.in/index.php
+NOTE:Quality Rice Products - All Types Available. Contact: Vishal (Primary), Kori Veeresha
+END:VCARD`;
+
+    const blob = new Blob([vCardData], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Sri_Raghavendra_Canvasing.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+    
+    // Show feedback
+    const btn = document.querySelector('.save-contact-modern');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> Contact Saved!';
+    btn.style.background = '#4ade80';
+    
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+    }, 2000);
 }
 
 // ==================== PRODUCT ENQUIRY ====================
@@ -135,62 +135,12 @@ function enquireProduct(productName) {
     window.open(whatsappURL, '_blank');
 }
 
-// ==================== REVIEW & QR INTERACTIONS ====================
-
-function setupReviewAndQRInteractions() {
-    const reviewCircle = document.querySelector('.review-circle');
-    if (reviewCircle) {
-        reviewCircle.addEventListener('click', function() {
-            const googleReviewURL = 'YOUR_GOOGLE_REVIEW_LINK_HERE';
-            window.open(googleReviewURL, '_blank');
-        });
-    }
-
-    const instagramHandle = document.querySelector('.instagram-handle');
-    if (instagramHandle) {
-        instagramHandle.addEventListener('click', function() {
-            window.open('YOUR_INSTAGRAM_URL_HERE', '_blank');
-        });
-    }
-
-    const qrCard = document.querySelector('.qr-code-card');
-    if (qrCard) {
-        qrCard.style.cursor = 'pointer';
-        qrCard.addEventListener('click', function() {
-            window.open('YOUR_INSTAGRAM_URL_HERE', '_blank');
-        });
-    }
-}
-
-// ==================== SCROLL TO TOP BUTTON ====================
-
-function setupScrollButton() {
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    
-    if (!scrollBtn) return;
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('visible');
-        } else {
-            scrollBtn.classList.remove('visible');
-        }
-    });
-    
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
 // ==================== SHARE MORE BUTTON ====================
 
 function shareMore() {
     if (navigator.share) {
         navigator.share({
-            title: 'Sri Raghavendra Canvassing',
+            title: 'Sri Raghavendra Canvasing',
             text: 'Check out this business for quality rice products!',
             url: 'https://raghavendracanvasing.in'
         }).catch(err => console.log('Error sharing:', err));
@@ -315,33 +265,31 @@ function addAnimations() {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    // Simple quick fade-in for contact card
-    const contactCard = document.querySelector('.contact-card');
-    if (contactCard) {
-        contactCard.style.opacity = '1';
+    // Fade-in animation for the modern contact card
+    const modernCard = document.querySelector('.modern-contact-card');
+    if (modernCard) {
+        modernCard.style.opacity = '0';
+        modernCard.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            modernCard.style.transition = 'all 0.6s ease';
+            modernCard.style.opacity = '1';
+            modernCard.style.transform = 'translateY(0)';
+        }, 100);
     }
     
-    // Add pulse animation to contact button
-    setInterval(() => {
-        const btn = document.querySelector('.contact-us-btn');
-        if (btn) {
-            btn.style.animation = 'pulse 0.5s ease';
-            setTimeout(() => {
-                btn.style.animation = '';
-            }, 500);
-        }
-    }, 5000);
-    
-    // Add pulse animation CSS
-    const pulseStyle = document.createElement('style');
-    pulseStyle.textContent = `
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-    `;
-    document.head.appendChild(pulseStyle);
+    // Add subtle animations to action buttons
+    const actionButtons = document.querySelectorAll('.call-btn, .whatsapp-btn');
+    actionButtons.forEach((btn, index) => {
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            btn.style.transition = 'all 0.4s ease';
+            btn.style.opacity = '1';
+            btn.style.transform = 'translateY(0)';
+        }, 200 + (index * 50));
+    });
 }
 
 // Optional: Reset visit counter (for testing)
