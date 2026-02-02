@@ -31,8 +31,8 @@
         <div class="banner-section">
             <img src="./images/background img.png" alt="Rice Fields Background" class="banner-bg">
             <div class="banner-overlay">
-                <img src="./images/WhatsApp Image 2026-01-26 at 6.45.44 PM.jpeg" alt="Company Logo" class="banner-logo">
-                <h2 class="banner-title">Sri Raghavendra Canvasing</h2>
+                <img src="./images/Group 1.png" alt="profile pic" class="banner-logo">
+                <h2 class="banner-title">Kori Veeresha</h2>
             </div>
         </div>
 
@@ -126,36 +126,44 @@
         </div>
     </div>
     
-    <!-- Profile Impressions Section -->
-    <section class="profile-section">
-        <div class="impressions-container">
-            <div class="wave-divider top-wave"></div>
-            <p class="impressions-label">Profile Impressions</p>
-            <div class="views-icon">
-                <i class="fas fa-eye"></i>
+    <!-- Note Section (Replaces Profile Impressions) -->
+    <section class="note-section">
+        <div class="note-container">
+            <div class="note-header">
+                <i class="fas fa-info-circle"></i>
+                <h3>Note</h3>
             </div>
-            <p class="views-label">Total Views</p>
-            <div class="view-counter" id="viewCounter">
-                <span class="digit">0</span>
-                <span class="digit">0</span>
-                <span class="digit">0</span>
-                <span class="digit">0</span>
-                <span class="digit">0</span>
-            </div>
-            <div class="wave-divider bottom-wave"></div>
-        </div>
-
-        <!-- Click here to Share -->
-        <div class="share-section">
-            <p class="share-text">Click here to Share</p>
-            <div class="social-share-icons">
-                <a href="https://wa.me/?text=Check%20out%20Sri%20Raghavendra%20Canvassing%20-%20Quality%20Rice%20Products!%20Visit:%20https://raghavendracanvasing.in" class="share-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://raghavendracanvasing.in" class="share-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/intent/tweet?text=Check%20out%20Sri%20Raghavendra%20Canvassing%20-%20Quality%20Rice%20Products!&url=https://raghavendracanvasing.in" class="share-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:?subject=Sri%20Raghavendra%20Canvassing&body=Check%20out%20this%20business%20for%20quality%20rice%20products:%20https://raghavendracanvasing.in" class="share-icon email"><i class="fas fa-envelope"></i></a>
-                <a href="YOUR_INSTAGRAM_URL_HERE" class="share-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/share/url?url=https://raghavendracanvasing.in&text=Check%20out%20Sri%20Raghavendra%20Canvassing" class="share-icon telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                <a href="#" class="share-icon more" onclick="shareMore(); return false;"><i class="fas fa-ellipsis-h"></i></a>
+            <div class="note-content">
+                <p class="greeting">Hello sir / madam.</p>
+                <p class="thank-you">Thank you for reaching out</p>
+                <h4 class="company-name">SRI RAGHAVENDRA CANVASSING</h4>
+                <p class="intro-text">You can contact / message to below mentioned numbers for the informations. We are happy to receive the messages from all over the India.</p>
+                
+                <div class="contact-info-list">
+                    <div class="info-item">
+                        <h5><i class="fas fa-shopping-cart"></i> Rice brand sales / marketing / price info</h5>
+                        <p class="number" onclick="makeCall('9483533229')"><i class="fas fa-phone"></i> 9483533229</p>
+                        <p class="person">Veeresh sir.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h5><i class="fas fa-indian-rupee-sign"></i> Payment and other related info</h5>
+                        <p class="number" onclick="makeCall('9739413766')"><i class="fas fa-phone"></i> 9739413766</p>
+                        <p class="person">Vishal sir.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h5><i class="fas fa-map-marker-alt"></i> Mysuru related info</h5>
+                        <p class="number" onclick="makeCall('8546991617')"><i class="fas fa-phone"></i> 8546991617</p>
+                        <p class="person">Prakash sir.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h5><i class="fas fa-check-circle"></i> Rice sample and quality incharge</h5>
+                        <p class="number" onclick="makeCall('9740746278')"><i class="fas fa-phone"></i> 9740746278</p>
+                        <p class="person">Irfan sir.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -169,7 +177,7 @@
                 <a href="YOUR_FACEBOOK_URL_HERE" class="social-link facebook" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="mailto:sriraghavendracanvassing5@gmail.com" class="social-link email">
+                <a href="/cdn-cgi/l/email-protection#5b282932293a3c333a2d3e353f293a383a352d3a282832353c6e1b3c363a323775383436" class="social-link email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://wa.me/919739413766" class="social-link whatsapp" target="_blank">
@@ -421,6 +429,21 @@
         </div>
     </section>
     
+    
+    <!-- Views Counter Section (Simple style above map) -->
+    <section class="views-counter-section">
+        <div class="views-counter-container">
+            <p class="views-title">Total Views</p>
+            <div class="view-counter" id="viewCounter">
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+                <span class="digit">0</span>
+            </div>
+        </div>
+    </section>
+
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.7711274597436!2d76.6610567!3d12.2637618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6f007e9c873b%3A0xf43e46140bd2702b!2sSri%20Raghavendra%20Canvassing!5e0!3m2!1sen!2sin!4v1769664953434!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="location"></iframe>
     </div>

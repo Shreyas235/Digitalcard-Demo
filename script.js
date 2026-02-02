@@ -1,9 +1,7 @@
 // ==================== INITIALIZATION ====================
 
-// Script is at bottom of HTML, so DOM is already ready
 displayVisitCount();
 setupGalleryItems();
-addAnimations();
 
 // ==================== VISIT COUNTER ====================
 
@@ -51,26 +49,22 @@ function animateDigit(digitElement, finalValue, delay) {
     }, delay);
 }
 
-// ==================== MODERN CONTACT CARD FUNCTIONS ====================
+// ==================== CONTACT CARD FUNCTIONS ====================
 
-// Make a phone call
 function makeCall(phoneNumber) {
     window.location.href = `tel:${phoneNumber}`;
 }
 
-// Open WhatsApp with a specific contact
 function openWhatsApp(phoneNumber, contactName) {
     const message = `Hello ${contactName}! I would like to know more about your rice products.`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
 }
 
-// Open website
 function openWebsite() {
     window.open('https://raghavendracanvasing.in/index.php', '_blank');
 }
 
-// Share the card
 function shareCard() {
     if (navigator.share) {
         navigator.share({
@@ -79,7 +73,6 @@ function shareCard() {
             url: window.location.href
         }).catch(err => console.log('Error sharing:', err));
     } else {
-        // Fallback for browsers that don't support Web Share API
         const shareURL = window.location.href;
         navigator.clipboard.writeText(shareURL).then(() => {
             alert('Link copied to clipboard! Share it with others.');
@@ -89,7 +82,6 @@ function shareCard() {
     }
 }
 
-// Save contact as VCF
 function saveContactModern() {
     const vCardData = `BEGIN:VCARD
 VERSION:3.0
@@ -114,7 +106,6 @@ END:VCARD`;
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
     
-    // Show feedback
     const btn = document.querySelector('.save-contact-modern');
     const originalText = btn.innerHTML;
     btn.innerHTML = '<i class="fas fa-check"></i> Contact Saved!';
@@ -135,20 +126,6 @@ function enquireProduct(productName) {
     window.open(whatsappURL, '_blank');
 }
 
-// ==================== SHARE MORE BUTTON ====================
-
-function shareMore() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Sri Raghavendra Canvasing',
-            text: 'Check out this business for quality rice products!',
-            url: 'https://raghavendracanvasing.in'
-        }).catch(err => console.log('Error sharing:', err));
-    } else {
-        alert('Sharing is not supported on this browser. Please copy the link: https://raghavendracanvasing.in');
-    }
-}
-
 // ==================== GALLERY ITEMS ====================
 
 function setupGalleryItems() {
@@ -160,8 +137,6 @@ function setupGalleryItems() {
         });
     });
 }
-
-// ==================== IMAGE MODAL ====================
 
 function openImageModal(src, title) {
     const modal = document.createElement('div');
@@ -258,40 +233,3 @@ function openImageModal(src, title) {
         }
     });
 }
-
-// ==================== ANIMATIONS ====================
-
-function addAnimations() {
-    // Smooth scroll behavior
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Fade-in animation for the modern contact card
-    const modernCard = document.querySelector('.modern-contact-card');
-    if (modernCard) {
-        modernCard.style.opacity = '0';
-        modernCard.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-            modernCard.style.transition = 'all 0.6s ease';
-            modernCard.style.opacity = '1';
-            modernCard.style.transform = 'translateY(0)';
-        }, 100);
-    }
-    
-    // Add subtle animations to action buttons
-    const actionButtons = document.querySelectorAll('.call-btn, .whatsapp-btn');
-    actionButtons.forEach((btn, index) => {
-        btn.style.opacity = '0';
-        btn.style.transform = 'translateY(10px)';
-        
-        setTimeout(() => {
-            btn.style.transition = 'all 0.4s ease';
-            btn.style.opacity = '1';
-            btn.style.transform = 'translateY(0)';
-        }, 200 + (index * 50));
-    });
-}
-
-// Optional: Reset visit counter (for testing)
-// Uncomment the line below to reset the counter
-// localStorage.removeItem('siteVisits');

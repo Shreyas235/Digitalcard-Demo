@@ -14,19 +14,12 @@ body {
     margin: 0;
 }
 
-/* Main container for entire website */
 #main-container {
     max-width: 700px;
     margin: 0 auto;
     background: white;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-#main-container.loading {
-    opacity: 0.5;
 }
 
 /* ==================== MODERN CONTACT CARD ==================== */
@@ -135,8 +128,8 @@ body {
 }
 
 .banner-logo {
-    width: 130px;
-    height: 130px;
+    width: 170px;
+    height: 200px;
     border-radius: 15px;
     object-fit: cover;
     border: 4px solid white;
@@ -150,24 +143,6 @@ body {
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     padding: 0 20px;
-}
-
-.online-indicator {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: white;
-    border-radius: 50%;
-    padding: 4px;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
 }
 
 /* Action Buttons */
@@ -191,23 +166,10 @@ body {
     justify-content: center;
     gap: 8px;
     transition: all 0.3s ease;
-}
-
-.call-btn-1 {
     background: #3b82f6;
 }
 
-.call-btn-1:hover {
-    background: #2563eb;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-}
-
-.call-btn-2 {
-    background: #3b82f6;
-}
-
-.call-btn-2:hover {
+.call-btn:hover {
     background: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
@@ -364,155 +326,141 @@ body {
     text-align: justify;
 }
 
-/* ==================== PROFILE IMPRESSIONS SECTION ==================== */
+/* ==================== NOTE SECTION ==================== */
 
-.profile-section {
+.note-section {
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 
-.impressions-container {
-    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
+.note-container {
+    background: linear-gradient(135deg, #006837 0%, #228B22 50%, #D4AF37 100%);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.note-header i {
+    font-size: 1.8rem;
     color: white;
 }
 
-.wave-divider {
-    width: 100%;
-    height: 20px;
-    background-image: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 10px,
-        currentColor 10px,
-        currentColor 11px
-    );
-    background-size: 20px 20px;
-    color: #4a4a4a;
-}
-
-.top-wave {
-    margin-bottom: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20'%3E%3Cpath fill='%234a4a4a' d='M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10 L1200,20 L0,20 Z'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-size: 120px 20px;
-}
-
-.bottom-wave {
-    margin-top: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20'%3E%3Cpath fill='%234a4a4a' d='M0,10 Q30,20 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10 L1200,0 L0,0 Z'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-size: 120px 20px;
-}
-
-.impressions-label {
-    font-size: 0.9rem;
-    color: #999;
-    margin-bottom: 15px;
+.note-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.views-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.note-content {
     color: white;
 }
 
-.views-label {
+.greeting {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.thank-you {
     font-size: 1rem;
-    color: #ccc;
     margin-bottom: 15px;
-    font-weight: 500;
+    white-space: nowrap;
 }
 
-.view-counter {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.digit {
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    font-family: 'Courier New', monospace;
-}
-
-/* Share Section */
-.share-section {
-    background: white;
-    padding: 20px;
+.company-name {
+    font-size: 1.4rem;
+    font-weight: 800;
     text-align: center;
-    border-bottom: 2px solid #e0e0e0;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.share-text {
-    font-size: 0.95rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 500;
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-.social-share-icons {
+.contact-info-list {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.share-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+.info-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid white;
     transition: all 0.3s ease;
 }
 
-.share-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
 }
 
-.share-icon.whatsapp {
-    background: #25D366;
+.info-item h5 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.share-icon.facebook {
-    background: #1877F2;
+.info-item h5 i {
+    font-size: 1.2rem;
 }
 
-.share-icon.twitter {
-    background: #1DA1F2;
+.info-item .number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.share-icon.email {
-    background: #EA4335;
+.info-item .number:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
 
-.share-icon.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.share-icon.telegram {
-    background: #0088cc;
-}
-
-.share-icon.more {
-    background: #FF6B35;
+.info-item .person {
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 8px;
 }
 
 /* Social Media Section */
@@ -582,40 +530,11 @@ body {
 /* ==================== GALLERY SECTIONS ==================== */
 
 .gallery-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #006837 0%, #228B22 50%, #D4AF37 100%);
     padding: 40px 20px;
     max-width: 100%;
-    animation: slideDown 0.5s ease;
     border-radius: 20px;
     margin-bottom: 20px;
-}
-
-/* ==================== MAP SECTION ==================== */
-
-.map {
-    width: 100%;
-    height: auto;
-    margin: 0 auto 20px auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-.location {
-    width: 100%;
-    height: 450px;
-    border: none;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .gallery-title {
@@ -653,22 +572,14 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
+.gallery-item img,
 .gallery-item picture {
     width: 100%;
     display: block;
 }
 
-.gallery-item picture img {
-    width: 100%;
+.gallery-item img {
     height: auto;
-    display: block;
     border-radius: 5px;
 }
 
@@ -700,6 +611,60 @@ body {
 
 .enquire-btn-section i {
     font-size: 1.3rem;
+}
+
+/* ==================== VIEWS COUNTER SECTION ==================== */
+
+.views-counter-section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.views-counter-container {
+    background: #1a1a1a;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.views-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-counter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.digit {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+/* ==================== MAP SECTION ==================== */
+
+.map {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.location {
+    width: 100%;
+    height: 450px;
+    border: none;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -750,22 +715,28 @@ body {
         font-size: 0.9rem;
     }
 
-    .view-counter {
-        gap: 10px;
+    .note-container {
+        padding: 25px 20px;
     }
 
-    .digit {
-        font-size: 1.5rem;
+    .note-header h3 {
+        font-size: 1.3rem;
     }
 
-    .social-share-icons {
-        gap: 8px;
+    .company-name {
+        font-size: 1.1rem;
     }
 
-    .share-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+    .greeting, .thank-you {
+        font-size: 0.95rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+    }
+
+    .info-item .number {
+        font-size: 1.1rem;
     }
 
     .social-media-icons {
@@ -796,6 +767,18 @@ body {
     
     .enquire-btn-section i {
         font-size: 1.2rem;
+    }
+
+    .views-title {
+        font-size: 0.85rem;
+    }
+
+    .view-counter {
+        gap: 10px;
+    }
+
+    .digit {
+        font-size: 1.5rem;
     }
 }
 
@@ -861,16 +844,47 @@ body {
         font-size: 1.1rem;
     }
 
-    .impressions-container {
+    .note-container {
         padding: 20px 15px;
     }
 
-    .views-icon {
-        font-size: 2rem;
+    .note-header h3 {
+        font-size: 1.1rem;
     }
 
-    .digit {
-        font-size: 1.2rem;
+    .greeting {
+        font-size: 0.9rem;
+    }
+
+    .thank-you {
+        font-size: 0.85rem;
+    }
+
+    .intro-text {
+        font-size: 0.85rem;
+    }
+
+    .company-name {
+        font-size: 1rem;
+        padding: 12px;
+        letter-spacing: 1px;
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+
+    .info-item h5 {
+        font-size: 0.95rem;
+    }
+
+    .info-item .number {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    .info-item .person {
+        font-size: 0.85rem;
     }
 
     .social-link {
@@ -901,5 +915,17 @@ body {
     
     .enquire-btn-section i {
         font-size: 1.1rem;
+    }
+
+    .views-title {
+        font-size: 0.75rem;
+    }
+
+    .view-counter {
+        gap: 6px;
+    }
+
+    .digit {
+        font-size: 1.2rem;
     }
 }
