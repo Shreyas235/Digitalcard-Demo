@@ -1,0 +1,645 @@
+/* ==================== GLOBAL STYLES ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#main-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* ==================== MODERN CONTACT CARD ==================== */
+
+.modern-contact-card {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-subtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.share-btn i {
+    font-size: 1.1rem;
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 15px 20px 0;
+}
+
+.call-btn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    background: #3b82f6;
+}
+
+.call-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.whatsapp-btn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: #25d366;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.email-btn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: #EA4335;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    grid-column: 1 / -1;
+}
+
+.email-btn:hover {
+    background: #d33426;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 67, 53, 0.4);
+}
+
+.save-contact-wrapper {
+    padding: 15px 20px;
+}
+
+.save-contact-modern {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.save-contact-modern:hover {
+    background: #f5f5f5;
+    border-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Contact List */
+.contact-list {
+    padding: 20px;
+    background: white;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.phone-icon {
+    background: #3b82f6;
+}
+
+.whatsapp-icon {
+    background: #25d366;
+}
+
+.email-icon {
+    background: #EA4335;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 4px 0;
+}
+
+.contact-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* About Section */
+.about-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.about-header i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+}
+
+.about-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #292929;
+    text-align: justify;
+}
+
+/* Social Media Section */
+.social-media-section {
+    background: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.social-media-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-link.facebook {
+    background: #1877F2;
+}
+
+.social-link.email {
+    background: #EA4335;
+}
+
+.social-link.whatsapp {
+    background: #25D366;
+}
+
+/* ==================== MAP SECTION ==================== */
+
+.map {
+    width: 100%;
+    height: auto;
+    margin: 20px auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablets and Small Laptops */
+@media (max-width: 768px) {
+    #main-container {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .card-header {
+        padding: 20px 15px;
+    }
+
+    .header-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-title {
+        font-size: 0.95rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .share-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .action-buttons {
+        gap: 10px;
+        padding: 12px 15px 0;
+    }
+
+    .call-btn,
+    .whatsapp-btn,
+    .email-btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .save-contact-wrapper {
+        padding: 12px 15px;
+    }
+
+    .contact-list {
+        padding: 15px;
+    }
+
+    .contact-item {
+        padding: 12px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .about-section {
+        padding: 15px;
+    }
+
+    .about-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+    }
+
+    .social-media-section {
+        padding: 20px 15px;
+    }
+
+    .social-link {
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+    }
+
+    .map iframe {
+        height: 350px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    #main-container {
+        padding: 10px;
+    }
+
+    .modern-contact-card {
+        border-radius: 15px;
+    }
+
+    .card-header {
+        padding: 15px 12px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .header-left {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-title {
+        font-size: 0.85rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .share-btn {
+        align-self: flex-end;
+        margin-top: -45px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px 12px 0;
+    }
+
+    .call-btn,
+    .whatsapp-btn,
+    .email-btn {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .email-btn {
+        grid-column: 1;
+    }
+
+    .save-contact-wrapper {
+        padding: 10px 12px;
+    }
+
+    .save-contact-modern {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .contact-list {
+        padding: 12px;
+    }
+
+    .contact-item {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .contact-label {
+        font-size: 0.75rem;
+    }
+
+    .contact-value {
+        font-size: 0.9rem;
+    }
+
+    .about-section {
+        padding: 12px;
+    }
+
+    .about-header {
+        gap: 8px;
+    }
+
+    .about-header i {
+        font-size: 1.3rem;
+    }
+
+    .about-header h3 {
+        font-size: 1rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .social-media-section {
+        padding: 18px 12px;
+    }
+
+    .social-media-text {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .social-media-icons {
+        gap: 15px;
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    .map {
+        margin: 15px auto 0;
+        border-radius: 15px;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .header-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header-title {
+        font-size: 0.75rem;
+    }
+
+    .call-btn,
+    .whatsapp-btn,
+    .email-btn {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashtriya Samruddhi - Contact Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+    
+    <!-- Modern Contact Card -->
+    <div class="modern-contact-card">
+        <!-- Top Header -->
+        <div class="card-header">
+            <div class="header-left">
+                <img src="./images/logo.jpeg" alt="Logo" class="header-logo">
+                <div class="header-info">
+                    <h1 class="header-title">Rashtriya Samruddhi Sauharda Sahakari Sangha</h1>
+                    <p class="header-subtitle">Digital Business Card</p>
+                </div>
+            </div>
+            <button class="share-btn" onclick="shareCard()">
+                <i class="fas fa-share-alt"></i>
+            </button>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner-section">
+            <img src="./images/background.jpeg" alt="Background" class="banner-bg">
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="call-btn" onclick="makeCall('9019369789')">
+                <i class="fas fa-phone"></i> Call 1
+            </button>
+            <button class="call-btn" onclick="makeCall('7975464382')">
+                <i class="fas fa-phone"></i> Call 2
+            </button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="whatsapp-btn" onclick="openWhatsApp('919019369789', 'Name1')">
+                <i class="fab fa-whatsapp"></i> Name1
+            </button>
+            <button class="whatsapp-btn" onclick="openWhatsApp('917975464382', 'Name2')">
+                <i class="fab fa-whatsapp"></i> Name2
+            </button>
+        </div>
+
+        <div class="action-buttons">
+            <a href="mailto:contact@rashtriyasamruddhi.com" class="email-btn">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+        </div>
+
+        <div class="save-contact-wrapper">
+            <button class="save-contact-modern" onclick="saveContactModern()">
+                <i class="fas fa-download"></i> Save Contact
+            </button>
+        </div>
+
+        <!-- Contact Details List -->
+        <div class="contact-list">
+            <div class="contact-item" onclick="makeCall('9019369789')">
+                <div class="contact-icon phone-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Phone 1</p>
+                    <p class="contact-value">9019369789</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="makeCall('7975464382')">
+                <div class="contact-icon phone-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Phone 2</p>
+                    <p class="contact-value">7975464382</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="openWhatsApp('919019369789', 'Name1')">
+                <div class="contact-icon whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Name1 (Primary)</p>
+                    <p class="contact-value">919019369789</p>
+                </div>
+            </div>
+
+            <div class="contact-item" onclick="openWhatsApp('917975464382', 'Name2')">
+                <div class="contact-icon whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Name2</p>
+                    <p class="contact-value">917975464382</p>
+                </div>
+            </div>
+
+            <a href="mailto:contact@rashtriyasamruddhi.com" class="contact-item email-item">
+                <div class="contact-icon email-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Email</p>
+                    <p class="contact-value">contact@rashtriyasamruddhi.com</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="about-section">
+            <div class="about-header">
+                <i class="fas fa-info-circle"></i>
+                <h3>About Us</h3>
+            </div>
+            <p class="about-text">
+                Welcome to Rashtriya Samruddhi Sauharda Sahakari Sangha! We are dedicated to fostering economic growth and prosperity through cooperative efforts. Our mission is to empower individuals and communities by providing financial services, support, and opportunities for sustainable development. Join us in our journey towards a brighter future!
+            </p>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media-section">
+        <p class="social-media-text">Follow Us On</p>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com" class="social-link instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" class="social-link facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:contact@rashtriyasamruddhi.com" class="social-link email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/919019369789" class="social-link whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.814103576653!2d76.65724897506458!3d12.260855987992993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE1JzM5LjEiTiA3NsKwMzknMzUuNCJF!5e0!3m2!1sen!2sin!4v1770439905013!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </div>
+</body>
+</html>
