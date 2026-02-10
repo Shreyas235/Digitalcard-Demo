@@ -1,157 +1,443 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rashtriya Samruddhi - Contact Card</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main-container">
-    
-    <!-- Modern Contact Card -->
-    <div class="modern-contact-card">
+      <!-- Modern Contact Card -->
+      <div class="modern-contact-card">
         <!-- Top Header -->
         <div class="card-header">
-            <div class="header-left">
-                <img src="./images/logo.jpeg" alt="Logo" class="header-logo">
-                <div class="header-info">
-                    <h1 class="header-title">Rashtriya Samruddhi Sauharda Sahakari Sangha</h1>
-                    <p class="header-subtitle">Digital Business Card</p>
-                </div>
+          <div class="header-left">
+            <img src="./images/logo.jpeg" alt="Logo" class="header-logo" />
+            <div class="header-info">
+              <h1 class="header-title">
+                Rashtriya Samruddhi Sauharda Sahakari Sangha
+              </h1>
+              <p class="header-subtitle">Digital Business Card</p>
             </div>
-            <button class="share-btn" onclick="shareCard()">
-                <i class="fas fa-share-alt"></i>
-            </button>
+          </div>
+          <button class="share-btn" onclick="shareCard()">
+            <i class="fas fa-share-alt"></i>
+          </button>
         </div>
 
         <!-- Banner Section -->
         <div class="banner-section">
-            <img src="./images/background.jpeg" alt="Background" class="banner-bg">
+          <img
+            src="./images/background.jpeg"
+            alt="Background"
+            class="banner-bg"
+          />
         </div>
-        
+
         <!-- Action Buttons -->
         <div class="action-buttons">
-            <button class="call-btn" onclick="makeCall('9019369789')">
-                <i class="fas fa-phone"></i> Call 1
-            </button>
-            <button class="call-btn" onclick="makeCall('7975464382')">
-                <i class="fas fa-phone"></i> Call 2
-            </button>
+          <button class="call-btn" onclick="makeCall('9019369789')">
+            <i class="fas fa-phone"></i> Call 1
+          </button>
+          <button class="call-btn" onclick="makeCall('7975464382')">
+            <i class="fas fa-phone"></i> Call 2
+          </button>
         </div>
 
         <div class="action-buttons">
-            <button class="whatsapp-btn" onclick="openWhatsApp('919019369789', 'Name1')">
-                <i class="fab fa-whatsapp"></i> Name1
-            </button>
-            <button class="whatsapp-btn" onclick="openWhatsApp('917975464382', 'Name2')">
-                <i class="fab fa-whatsapp"></i> Name2
-            </button>
+          <button
+            class="whatsapp-btn"
+            onclick="openWhatsApp('919019369789', 'Name1')"
+          >
+            <i class="fab fa-whatsapp"></i> Name1
+          </button>
+          <button
+            class="whatsapp-btn"
+            onclick="openWhatsApp('917975464382', 'Name2')"
+          >
+            <i class="fab fa-whatsapp"></i> Name2
+          </button>
         </div>
 
         <div class="action-buttons">
-            <a href="mailto:contact@rashtriyasamruddhi.com" class="email-btn">
-                <i class="fas fa-envelope"></i> Email Us
-            </a>
+          <a href="mailto:contact@rashtriyasamruddhi.com" class="email-btn">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
         </div>
 
         <div class="save-contact-wrapper">
-            <button class="save-contact-modern" onclick="saveContactModern()">
-                <i class="fas fa-download"></i> Save Contact
-            </button>
+          <button class="save-contact-modern" onclick="saveContactModern()">
+            <i class="fas fa-download"></i> Save Contact
+          </button>
         </div>
 
         <!-- Contact Details List -->
         <div class="contact-list">
-            <div class="contact-item" onclick="makeCall('9019369789')">
-                <div class="contact-icon phone-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-info">
-                    <p class="contact-label">Phone 1</p>
-                    <p class="contact-value">9019369789</p>
-                </div>
+          <div class="contact-item" onclick="makeCall('9019369789')">
+            <div class="contact-icon phone-icon">
+              <i class="fas fa-phone"></i>
             </div>
-
-            <div class="contact-item" onclick="makeCall('7975464382')">
-                <div class="contact-icon phone-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-info">
-                    <p class="contact-label">Phone 2</p>
-                    <p class="contact-value">7975464382</p>
-                </div>
+            <div class="contact-info">
+              <p class="contact-label">Phone 1</p>
+              <p class="contact-value">9019369789</p>
             </div>
+          </div>
 
-            <div class="contact-item" onclick="openWhatsApp('919019369789', 'Name1')">
-                <div class="contact-icon whatsapp-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="contact-info">
-                    <p class="contact-label">Name1 (Primary)</p>
-                    <p class="contact-value">919019369789</p>
-                </div>
+          <div class="contact-item" onclick="makeCall('7975464382')">
+            <div class="contact-icon phone-icon">
+              <i class="fas fa-phone"></i>
             </div>
-
-            <div class="contact-item" onclick="openWhatsApp('917975464382', 'Name2')">
-                <div class="contact-icon whatsapp-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="contact-info">
-                    <p class="contact-label">Name2</p>
-                    <p class="contact-value">917975464382</p>
-                </div>
+            <div class="contact-info">
+              <p class="contact-label">Phone 2</p>
+              <p class="contact-value">7975464382</p>
             </div>
+          </div>
 
-            <a href="mailto:contact@rashtriyasamruddhi.com" class="contact-item email-item">
-                <div class="contact-icon email-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-info">
-                    <p class="contact-label">Email</p>
-                    <p class="contact-value">contact@rashtriyasamruddhi.com</p>
-                </div>
-            </a>
+          <div
+            class="contact-item"
+            onclick="openWhatsApp('919019369789', 'Name1')"
+          >
+            <div class="contact-icon whatsapp-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">Name1 (Primary)</p>
+              <p class="contact-value">919019369789</p>
+            </div>
+          </div>
+
+          <div
+            class="contact-item"
+            onclick="openWhatsApp('917975464382', 'Name2')"
+          >
+            <div class="contact-icon whatsapp-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">Name2</p>
+              <p class="contact-value">917975464382</p>
+            </div>
+          </div>
+
+          <a
+            href="mailto:contact@rashtriyasamruddhi.com"
+            class="contact-item email-item"
+          >
+            <div class="contact-icon email-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-label">Email</p>
+              <p class="contact-value">contact@rashtriyasamruddhi.com</p>
+            </div>
+          </a>
         </div>
 
         <!-- About Us Section -->
         <div class="about-section">
-            <div class="about-header">
-                <i class="fas fa-info-circle"></i>
-                <h3>About Us</h3>
+          <div class="about-header">
+            <i class="fas fa-info-circle"></i>
+            <h3>About Us / ನಮ್ಮ ಬಗ್ಗೆ</h3>
+          </div>
+          <p class="about-text">
+            <strong>About Rashtriya Samruddhi Souharda Sahakari Sangha</strong><br />
+            A member-driven cooperative society (Souharda Sahakari), registered to provide financial services to its members in Mysuru district. Official details on specific services are not yet published online, as the society's website indicates it is "opening shortly".
+            <br /><br />
+            Rashtriya Samruddhi Souharda Sahakari Sangha Niyamita, Mysuru is a cooperative
+            institution established for the economic empowerment of small wage
+            workers, the working class, and the general public. The main
+            objective of our organization is to provide easy and reliable loan
+            facilities to those in need, while also educating members about
+            financial discipline and the importance of savings. Encouraging
+            entrepreneurship among youth and supporting them in starting their
+            own businesses through financial assistance, guidance, and
+            motivation is one of our key missions. Our goal is to help members
+            lead self-reliant lives and contribute to the overall economic
+            development of society. Trust, transparency, and a spirit of service
+            are the core values of our organization.
+            <br /><br />
+            <b
+              >ರಾಷ್ಟ್ರೀಯ ಸಮೃದ್ಧಿ ಸೌಹಾರ್ದ ಸಹಕಾರಿ ಸಂಘ ನಿಯಮಿತ, ಮೈಸೂರು (ಸ್ಥಳ: APMC
+              ಯಾರ್ಡ್, ಬಿ ಬ್ಲಾಕ್, ಬಂಡಿಪಾಳ್ಯ, ಮೈಸೂರು) ರಾಷ್ಟ್ರೀಯ ಸಮೃದ್ಧಿ ಸೌಹಾರ್ದ
+              ಸಹಕಾರಿ ಸಂಘ ನಿಯಮಿತವು ಸಣ್ಣ ವೇತನದ ಕಾರ್ಮಿಕರು, ದುಡಿಯುವ ವರ್ಗ ಮತ್ತು
+              ಸಾಮಾನ್ಯ ಜನರ ಆರ್ಥಿಕ ಸಬಲೀಕರಣಕ್ಕಾಗಿ ಸ್ಥಾಪಿತವಾದ ಸಹಕಾರಿ
+              ಸಂಸ್ಥೆಯಾಗಿದೆ. ನಮ್ಮ ಸಂಘದ ಮುಖ್ಯ ಉದ್ದೇಶವು ಅಗತ್ಯವಿರುವವರಿಗೆ ಸುಲಭ
+              ಮತ್ತು ನಂಬಿಕಸ್ಥ ಸಾಲ ಸೌಲಭ್ಯ ಒದಗಿಸುವುದರ ಜೊತೆಗೆ ಸದಸ್ಯರಲ್ಲಿ ಹಣಕಾಸಿನ
+              ಶಿಸ್ತು ಹಾಗೂ ಉಳಿತಾಯದ ಅರಿವು ಮೂಡಿಸುವುದಾಗಿದೆ. ಯುವಜನರಲ್ಲಿ
+              ಉದ್ಯಮಶೀಲತೆಯನ್ನು ಉತ್ತೇಜಿಸಿ, ಸ್ವಂತ ವ್ಯವಹಾರ ಆರಂಭಿಸಲು ಆರ್ಥಿಕ ಸಹಾಯ,
+              ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ಪ್ರೇರಣೆಯನ್ನು ನೀಡುವುದು ನಮ್ಮ ಪ್ರಮುಖ
+              ಧ್ಯೇಯವಾಗಿದೆ. ಸದಸ್ಯರು ಸ್ವಾವಲಂಬಿ ಜೀವನ ನಡೆಸುವಂತೆ ಮಾಡುವುದು ಹಾಗೂ
+              ಸಮಾಜದ ಒಟ್ಟು ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿಗೆ ಸಹಕಾರ ನೀಡುವುದು ನಮ್ಮ
+              ನಿಟ್ಟಾಗಿದೆ. ನಂಬಿಕೆ, ಪಾರದರ್ಶಕತೆ ಮತ್ತು ಸೇವಾಭಾವನೆ ನಮ್ಮ ಸಂಘದ ಮೂಲ
+              ಮೌಲ್ಯಗಳಾಗಿವೆ.
+            </b>
+          </p>
+          
+          <!-- Contact Details Box -->
+          <div class="contact-details-box">
+            <div class="contact-detail-header">
+              <i class="fas fa-address-card"></i>
+              <h4>Contact Details / ಸಂಪರ್ಕ ವಿವರಗಳು</h4>
             </div>
-            <p class="about-text">
-                Welcome to Rashtriya Samruddhi Sauharda Sahakari Sangha! We are dedicated to fostering economic growth and prosperity through cooperative efforts. Our mission is to empower individuals and communities by providing financial services, support, and opportunities for sustainable development. Join us in our journey towards a brighter future!
-            </p>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="detail-content">
+                <strong>Address:</strong>
+                No. 167, 1st Floor, B Block, APMC Yard,
+                Bandipalya, Mysuru – 570025,
+                Karnataka, India
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone-alt"></i>
+              <div class="detail-content">
+                <strong>Phone:</strong> <a href="tel:+919019369789">+91-90193-69789</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-globe"></i>
+              <div class="detail-content">
+                <strong>Website:</strong> <span class="coming-soon">rashtriyasamruddhi.in (coming soon)</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Social Media Links -->
-    <div class="social-media-section">
+      <!-- Services Section -->
+      <div class="services-section">
+        <div class="services-header">
+          <i class="fas fa-briefcase"></i>
+          <h2>Our Services / ನಮ್ಮ ಸೇವೆಗಳು</h2>
+        </div>
+
+        <!-- Savings & Deposits -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>🏦 Savings & Deposit Products</h3>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h4>Member Savings Accounts</h4>
+              <p>Basic deposit accounts that earn interest for members</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h4>Fixed Deposits (FDs)</h4>
+              <p>Term deposits with higher interest rates for fixed tenures</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4>Recurring Deposits (RDs)</h4>
+              <p>Regular monthly deposits with interest benefits</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <h4>Pigmy/Weekly Savings</h4>
+              <p>Small periodic savings collected systematically</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loan Products -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>💰 Loan Products</h3>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <h4>Personal Loans</h4>
+              <p>Short-term loans for personal expenses</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h4>Gold Loans</h4>
+              <p>Loans against pledged jewellery or gold</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-tractor"></i>
+              </div>
+              <h4>Agricultural/Farm Loans</h4>
+              <p>Support for farming and allied activities</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-store"></i>
+              </div>
+              <h4>Business/Enterprise Loans</h4>
+              <p>Credit for small business capital and working capital</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <h4>Vehicle Loans</h4>
+              <p>
+                Loans for two-wheelers, cars, and commercial vehicles (up to 80%
+                financing)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Services -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>🧾 Payment & Transfer Services</h3>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <h4>RTGS / NEFT</h4>
+              <p>Electronic fund transfer services</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <h4>Demand Drafts</h4>
+              <p>Instrument support for trade and official needs</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>Membership Services</h4>
+              <p>Cooperative membership accounts and benefits</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Membership Advantages -->
+        <div class="service-category advantages-section">
+          <div class="category-header">
+            <i class="fas fa-star"></i>
+            <h3>📌 Membership Advantages</h3>
+          </div>
+          <div class="advantages-list">
+            <div class="advantage-item">
+              <i class="fas fa-check-circle"></i>
+              <p>Dividend on deposits to members</p>
+            </div>
+            <div class="advantage-item">
+              <i class="fas fa-check-circle"></i>
+              <p>Financial literacy and awareness programs</p>
+            </div>
+            <div class="advantage-item">
+              <i class="fas fa-check-circle"></i>
+              <p>Member relief funds or insurance tie-ups</p>
+            </div>
+            <div class="advantage-item">
+              <i class="fas fa-check-circle"></i>
+              <p>Priority access to loans compared to commercial banks</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="service-cta">
+          <h3>Ready to become a member?</h3>
+          <p>Contact us today to learn more about our services and membership benefits</p>
+          <div class="cta-buttons">
+            <button class="cta-btn primary" onclick="makeCall('9019369789')">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+            <button class="cta-btn secondary" onclick="openWhatsApp('919019369789', 'Rashtriya Samruddhi')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promotional Banners -->
+      <div class="promo-section">
+        <div class="promo-header">
+          <i class="fas fa-bullhorn"></i>
+          <h2>Other Services</h2>
+        </div>
+        <div class="promo-grid">
+          <div class="promo-card">
+            <img src="./images/1.jpeg" alt="Personal Loan Offer" class="promo-image" />
+          </div>
+          <div class="promo-card">
+            <img src="./images/2.jpeg" alt="Lakhpathi Scheme RD" class="promo-image" />
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-media-section">
         <p class="social-media-text">Follow Us On</p>
         <div class="social-media-icons">
-            <a href="https://www.instagram.com" class="social-link instagram" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" class="social-link facebook" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="mailto:contact@rashtriyasamruddhi.com" class="social-link email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/919019369789" class="social-link whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+          <a
+            href="https://www.instagram.com"
+            class="social-link instagram"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com"
+            class="social-link facebook"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="mailto:contact@rashtriyasamruddhi.com"
+            class="social-link email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://wa.me/919019369789"
+            class="social-link whatsapp"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-    </div>
+      </div>
 
-    <!-- Map Section -->
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.814103576653!2d76.65724897506458!3d12.260855987992993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE1JzM5LjEiTiA3NsKwMzknMzUuNCJF!5e0!3m2!1sen!2sin!4v1770439905013!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Map Section -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.814103576653!2d76.65724897506458!3d12.260855987992993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE1JzM5LjEiTiA3NsKwMzknMzUuNCJF!5e0!3m2!1sen!2sin!4v1770439905013!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
-
-    </div>
-</body>
+  </body>
 </html>

@@ -37,7 +37,8 @@ TEL;TYPE=CELL:7975464382
 EMAIL:contact@rashtriyasamruddhi.com
 X-WHATSAPP;TYPE=CELL:919019369789
 X-WHATSAPP;TYPE=CELL:917975464382
-NOTE:Digital Business Card
+ADR;TYPE=WORK:;;No. 167, 1st Floor, B Block, APMC Yard, Bandipalya;Mysuru;Karnataka;570025;India
+NOTE:Digital Business Card - Rashtriya Samruddhi Souharda Sahakari Sangha Niyamita
 END:VCARD`;
 
     const blob = new Blob([vCardData], { type: 'text/vcard' });

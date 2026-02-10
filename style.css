@@ -300,7 +300,7 @@ body {
 }
 
 .about-header h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #333;
     margin: 0;
@@ -309,9 +309,358 @@ body {
 .about-text {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #292929;
+    color: #000000;
     text-align: justify;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
+
+/* Contact Details Box */
+.contact-details-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3b82f6;
+}
+
+.contact-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.contact-detail-header i {
+    font-size: 1.3rem;
+    color: #3b82f6;
+}
+
+.contact-detail-header h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    background: #e9ecef;
+    transform: translateX(3px);
+}
+
+.detail-item i {
+    font-size: 1.2rem;
+    color: #3b82f6;
+    margin-top: 2px;
+    min-width: 20px;
+}
+
+.detail-content {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.detail-content strong {
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.detail-content a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.detail-content a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.coming-soon {
+    color: #f59e0b;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ==================== SERVICES SECTION ==================== */
+
+.services-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3b82f6;
+}
+
+.services-header i {
+    font-size: 2rem;
+    color: #3b82f6;
+}
+
+.services-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.service-category {
+    margin-bottom: 35px;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-header i {
+    font-size: 1.5rem;
+    color: #25d366;
+}
+
+.category-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.service-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+    border-color: #3b82f6;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Advantages Section */
+.advantages-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.advantages-list {
+    display: grid;
+    gap: 12px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-item i {
+    font-size: 1.5rem;
+    color: #25d366;
+    flex-shrink: 0;
+}
+
+.advantage-item p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Service CTA */
+.service-cta {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.service-cta h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.service-cta p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 25px 0;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: #3b82f6;
+}
+
+.cta-btn.primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn.secondary {
+    background: #25d366;
+    color: white;
+}
+
+.cta-btn.secondary:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* ==================== PROMOTIONAL SECTION ==================== */
+
+.promo-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.promo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ff6b35;
+}
+
+.promo-header i {
+    font-size: 2rem;
+    color: #ff6b35;
+}
+
+.promo-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.promo-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.promo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ==================== SOCIAL MEDIA SECTION ==================== */
 
 /* Social Media Section */
 .social-media-section {
@@ -461,6 +810,39 @@ body {
         font-size: 0.9rem;
     }
 
+    .services-section {
+        padding: 20px;
+    }
+
+    .services-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    .promo-section {
+        padding: 20px;
+    }
+
+    .promo-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     .social-media-section {
         padding: 20px 15px;
     }
@@ -586,6 +968,92 @@ body {
         line-height: 1.6;
     }
 
+    .contact-details-box {
+        padding: 15px;
+    }
+
+    .contact-detail-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .detail-item {
+        padding: 10px;
+    }
+
+    .detail-content {
+        font-size: 0.85rem;
+    }
+
+    .services-section {
+        padding: 15px;
+    }
+
+    .services-header {
+        margin-bottom: 20px;
+    }
+
+    .services-header i {
+        font-size: 1.5rem;
+    }
+
+    .services-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .service-card h4 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-cta {
+        padding: 20px 15px;
+    }
+
+    .service-cta h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-cta p {
+        font-size: 0.9rem;
+    }
+
+    .promo-section {
+        padding: 15px;
+    }
+
+    .promo-header {
+        margin-bottom: 20px;
+    }
+
+    .promo-header i {
+        font-size: 1.5rem;
+    }
+
+    .promo-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .promo-grid {
+        gap: 12px;
+    }
+
     .social-media-section {
         padding: 18px 12px;
     }
@@ -631,6 +1099,14 @@ body {
     .email-btn {
         font-size: 0.8rem;
         padding: 10px;
+    }
+
+    .services-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .service-grid {
+        gap: 10px;
     }
 
     .social-link {
