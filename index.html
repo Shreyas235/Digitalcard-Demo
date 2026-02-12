@@ -43,25 +43,25 @@
         <!-- Action Buttons -->
         <div class="action-buttons">
           <button class="call-btn" onclick="makeCall('9019369789')">
-            <i class="fas fa-phone"></i> Call 1
+            <i class="fas fa-phone"></i> Rashtriya Samruddhi Office Number
           </button>
           <button class="call-btn" onclick="makeCall('7975464382')">
-            <i class="fas fa-phone"></i> Call 2
+            <i class="fas fa-phone"></i> Prathima M R
           </button>
         </div>
 
         <div class="action-buttons">
           <button
             class="whatsapp-btn"
-            onclick="openWhatsApp('919019369789', 'Name1')"
+            onclick="openWhatsApp('919019369789', 'Rashtriya Samruddhi Office Number')"
           >
-            <i class="fab fa-whatsapp"></i> Name1
+            <i class="fab fa-whatsapp"></i> Rashtriya Samruddhi Office Number
           </button>
           <button
             class="whatsapp-btn"
-            onclick="openWhatsApp('917975464382', 'Name2')"
+            onclick="openWhatsApp('917975464382', 'Prathima M R')"
           >
-            <i class="fab fa-whatsapp"></i> Name2
+            <i class="fab fa-whatsapp"></i> Prathima M R
           </button>
         </div>
 
@@ -77,6 +77,39 @@
           </button>
         </div>
 
+        <!-- ======================================================
+             APK DOWNLOAD SECTION
+             ======================================================
+             HOW TO USE:
+             1. Place your APK file in a folder named "app/" 
+                (e.g., app/RashtriyaSamruddhi.apk) — OR —
+                upload it to a cloud host (Google Drive, S3, etc.)
+             2. Update the apkURL variable in script.js with the 
+                correct path or URL to your APK file.
+             3. The button below will appear on the card and let
+                users download the app directly.
+        -->
+        <div class="apk-download-wrapper">
+          <div class="apk-banner">
+            <div class="apk-banner-left">
+              <div class="apk-icon-wrap">
+                <i class="fab fa-android"></i>
+              </div>
+              <div class="apk-banner-text">
+                <span class="apk-label">Download Our App</span>
+                <span class="apk-sublabel">Rashtriya Samruddhi — Android App</span>
+              </div>
+            </div>
+            <button class="apk-download-btn" onclick="downloadAPK()">
+              <i class="fas fa-download"></i> Download APK
+            </button>
+          </div>
+          <p class="apk-note">
+            <i class="fas fa-info-circle"></i>
+            For Android devices only. Enable "Install from Unknown Sources" in your device settings before installing.
+          </p>
+        </div>
+
         <!-- Contact Details List -->
         <div class="contact-list">
           <div class="contact-item" onclick="makeCall('9019369789')">
@@ -84,7 +117,7 @@
               <i class="fas fa-phone"></i>
             </div>
             <div class="contact-info">
-              <p class="contact-label">Phone 1</p>
+              <p class="contact-label">Rashtriya Samruddhi Office Number</p>
               <p class="contact-value">9019369789</p>
             </div>
           </div>
@@ -94,33 +127,35 @@
               <i class="fas fa-phone"></i>
             </div>
             <div class="contact-info">
-              <p class="contact-label">Phone 2</p>
+              <p class="contact-label">Prathima M R</p>
               <p class="contact-value">7975464382</p>
             </div>
           </div>
 
           <div
             class="contact-item"
-            onclick="openWhatsApp('919019369789', 'Name1')"
+            onclick="openWhatsApp('919019369789', 'Rashtriya Samruddhi Office Number')"
           >
             <div class="contact-icon whatsapp-icon">
               <i class="fab fa-whatsapp"></i>
             </div>
             <div class="contact-info">
-              <p class="contact-label">Name1 (Primary)</p>
+              <p class="contact-label">
+                Rashtriya Samruddhi Office Number (Primary)
+              </p>
               <p class="contact-value">919019369789</p>
             </div>
           </div>
 
           <div
             class="contact-item"
-            onclick="openWhatsApp('917975464382', 'Name2')"
+            onclick="openWhatsApp('917975464382', 'Prathima M R')"
           >
             <div class="contact-icon whatsapp-icon">
               <i class="fab fa-whatsapp"></i>
             </div>
             <div class="contact-info">
-              <p class="contact-label">Name2</p>
+              <p class="contact-label">Prathima M R</p>
               <p class="contact-value">917975464382</p>
             </div>
           </div>
@@ -146,13 +181,16 @@
             <h3>About Us / ನಮ್ಮ ಬಗ್ಗೆ</h3>
           </div>
           <p class="about-text">
-            A member-driven cooperative society (Souharda Sahakari), registered to provide financial services to its members in Mysuru district. Official details on specific services are not yet published online, as the society's website indicates it is "opening shortly".
+            A member-driven cooperative society (Souharda Sahakari), registered
+            to provide financial services to its members in Mysuru district.
+            Official details on specific services are not yet published online,
+            as the society's website indicates it is "opening shortly".
             <br /><br />
-            Rashtriya Samruddhi Souharda Sahakari Sangha Niyamita, Mysuru is a cooperative
-            institution established for the economic empowerment of small wage
-            workers, the working class, and the general public. The main
-            objective of our organization is to provide easy and reliable loan
-            facilities to those in need, while also educating members about
+            Rashtriya Samruddhi Souharda Sahakari Sangha Niyamita, Mysuru is a
+            cooperative institution established for the economic empowerment of
+            small wage workers, the working class, and the general public. The
+            main objective of our organization is to provide easy and reliable
+            loan facilities to those in need, while also educating members about
             financial discipline and the importance of savings. Encouraging
             entrepreneurship among youth and supporting them in starting their
             own businesses through financial assistance, guidance, and
@@ -165,19 +203,18 @@
               >ರಾಷ್ಟ್ರೀಯ ಸಮೃದ್ಧಿ ಸೌಹಾರ್ದ ಸಹಕಾರಿ ಸಂಘ ನಿಯಮಿತ, ಮೈಸೂರು (ಸ್ಥಳ: APMC
               ಯಾರ್ಡ್, ಬಿ ಬ್ಲಾಕ್, ಬಂಡಿಪಾಳ್ಯ, ಮೈಸೂರು) ರಾಷ್ಟ್ರೀಯ ಸಮೃದ್ಧಿ ಸೌಹಾರ್ದ
               ಸಹಕಾರಿ ಸಂಘ ನಿಯಮಿತವು ಸಣ್ಣ ವೇತನದ ಕಾರ್ಮಿಕರು, ದುಡಿಯುವ ವರ್ಗ ಮತ್ತು
-              ಸಾಮಾನ್ಯ ಜನರ ಆರ್ಥಿಕ ಸಬಲೀಕರಣಕ್ಕಾಗಿ ಸ್ಥಾಪಿತವಾದ ಸಹಕಾರಿ
-              ಸಂಸ್ಥೆಯಾಗಿದೆ. ನಮ್ಮ ಸಂಘದ ಮುಖ್ಯ ಉದ್ದೇಶವು ಅಗತ್ಯವಿರುವವರಿಗೆ ಸುಲಭ
-              ಮತ್ತು ನಂಬಿಕಸ್ಥ ಸಾಲ ಸೌಲಭ್ಯ ಒದಗಿಸುವುದರ ಜೊತೆಗೆ ಸದಸ್ಯರಲ್ಲಿ ಹಣಕಾಸಿನ
-              ಶಿಸ್ತು ಹಾಗೂ ಉಳಿತಾಯದ ಅರಿವು ಮೂಡಿಸುವುದಾಗಿದೆ. ಯುವಜನರಲ್ಲಿ
-              ಉದ್ಯಮಶೀಲತೆಯನ್ನು ಉತ್ತೇಜಿಸಿ, ಸ್ವಂತ ವ್ಯವಹಾರ ಆರಂಭಿಸಲು ಆರ್ಥಿಕ ಸಹಾಯ,
-              ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ಪ್ರೇರಣೆಯನ್ನು ನೀಡುವುದು ನಮ್ಮ ಪ್ರಮುಖ
-              ಧ್ಯೇಯವಾಗಿದೆ. ಸದಸ್ಯರು ಸ್ವಾವಲಂಬಿ ಜೀವನ ನಡೆಸುವಂತೆ ಮಾಡುವುದು ಹಾಗೂ
-              ಸಮಾಜದ ಒಟ್ಟು ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿಗೆ ಸಹಕಾರ ನೀಡುವುದು ನಮ್ಮ
+              ಸಾಮಾನ್ಯ ಜನರ ಆರ್ಥಿಕ ಸಬಲೀಕರಣಕ್ಕಾಗಿ ಸ್ಥಾಪಿತವಾದ ಸಹಕಾರಿ ಸಂಸ್ಥೆಯಾಗಿದೆ.
+              ನಮ್ಮ ಸಂಘದ ಮುಖ್ಯ ಉದ್ದೇಶವು ಅಗತ್ಯವಿರುವವರಿಗೆ ಸುಲಭ ಮತ್ತು ನಂಬಿಕಸ್ಥ ಸಾಲ
+              ಸೌಲಭ್ಯ ಒದಗಿಸುವುದರ ಜೊತೆಗೆ ಸದಸ್ಯರಲ್ಲಿ ಹಣಕಾಸಿನ ಶಿಸ್ತು ಹಾಗೂ ಉಳಿತಾಯದ
+              ಅರಿವು ಮೂಡಿಸುವುದಾಗಿದೆ. ಯುವಜನರಲ್ಲಿ ಉದ್ಯಮಶೀಲತೆಯನ್ನು ಉತ್ತೇಜಿಸಿ, ಸ್ವಂತ
+              ವ್ಯವಹಾರ ಆರಂಭಿಸಲು ಆರ್ಥಿಕ ಸಹಾಯ, ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ಪ್ರೇರಣೆಯನ್ನು
+              ನೀಡುವುದು ನಮ್ಮ ಪ್ರಮುಖ ಧ್ಯೇಯವಾಗಿದೆ. ಸದಸ್ಯರು ಸ್ವಾವಲಂಬಿ ಜೀವನ ನಡೆಸುವಂತೆ
+              ಮಾಡುವುದು ಹಾಗೂ ಸಮಾಜದ ಒಟ್ಟು ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿಗೆ ಸಹಕಾರ ನೀಡುವುದು ನಮ್ಮ
               ನಿಟ್ಟಾಗಿದೆ. ನಂಬಿಕೆ, ಪಾರದರ್ಶಕತೆ ಮತ್ತು ಸೇವಾಭಾವನೆ ನಮ್ಮ ಸಂಘದ ಮೂಲ
               ಮೌಲ್ಯಗಳಾಗಿವೆ.
             </b>
           </p>
-          
+
           <!-- Contact Details Box -->
           <div class="contact-details-box">
             <div class="contact-detail-header">
@@ -188,21 +225,24 @@
               <i class="fas fa-map-marker-alt"></i>
               <div class="detail-content">
                 <strong>Address:</strong>
-                No. 167, 1st Floor, B Block, APMC Yard,
-                Bandipalya, Mysuru – 570025,
-                Karnataka, India
+                No. 167, 1st Floor, B Block, APMC Yard, Bandipalya, Mysuru –
+                570025, Karnataka, India
               </div>
             </div>
             <div class="detail-item">
               <i class="fas fa-phone-alt"></i>
               <div class="detail-content">
-                <strong>Phone:</strong> <a href="tel:+919019369789">+91-90193-69789</a>
+                <strong>Phone:</strong>
+                <a href="tel:+919019369789">+91-90193-69789</a>
               </div>
             </div>
             <div class="detail-item">
               <i class="fas fa-globe"></i>
               <div class="detail-content">
-                <strong>Website:</strong> <span class="coming-soon">rashtriyasamruddhi.in (coming soon)</span>
+                <strong>Website:</strong>
+                <span class="coming-soon"
+                  >rashtriyasamruddhi.in (coming soon)</span
+                >
               </div>
             </div>
           </div>
@@ -235,14 +275,26 @@
                 <i class="fas fa-lock"></i>
               </div>
               <h4>Fixed Deposits (FDs)</h4>
-              <p>Term deposits with higher interest rates for fixed tenures</p>
+              <p>
+                Term deposits with higher interest rates for fixed tenures
+                <br />
+                <strong
+                  >8% - 9.25% interest rate for senior citizens +0.5%</strong
+                >
+              </p>
             </div>
             <div class="service-card">
               <div class="service-icon">
                 <i class="fas fa-calendar-alt"></i>
               </div>
               <h4>Recurring Deposits (RDs)</h4>
-              <p>Regular monthly deposits with interest benefits</p>
+              <p>
+                Regular monthly deposits with interest benefits <br />2400 *
+                36months get 1 lack<br />
+                <strong
+                  >"Highest returns than any other banks in Mysore district"</strong
+                >
+              </p>
             </div>
             <div class="service-card">
               <div class="service-icon">
@@ -362,12 +414,18 @@
         <!-- Contact CTA -->
         <div class="service-cta">
           <h3>Ready to become a member?</h3>
-          <p>Contact us today to learn more about our services and membership benefits</p>
+          <p>
+            Contact us today to learn more about our services and membership
+            benefits
+          </p>
           <div class="cta-buttons">
             <button class="cta-btn primary" onclick="makeCall('9019369789')">
               <i class="fas fa-phone"></i> Call Now
             </button>
-            <button class="cta-btn secondary" onclick="openWhatsApp('919019369789', 'Rashtriya Samruddhi')">
+            <button
+              class="cta-btn secondary"
+              onclick="openWhatsApp('919019369789', 'Rashtriya Samruddhi')"
+            >
               <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
           </div>
@@ -382,27 +440,51 @@
         </div>
         <div class="promo-grid">
           <div class="promo-card">
-            <img src="./images/2.jpeg" alt="Personal Loan Offer" class="promo-image" />
+            <img
+              src="./images/2.jpeg"
+              alt="Personal Loan Offer"
+              class="promo-image"
+            />
             <div class="promo-title">Personal Loan</div>
           </div>
           <div class="promo-card">
-            <img src="./images/1.jpeg" alt="Lakhpathi Scheme RD" class="promo-image" />
+            <img
+              src="./images/1.jpeg"
+              alt="Lakhpathi Scheme RD"
+              class="promo-image"
+            />
             <div class="promo-title">Lakhpathi Scheme (RD)</div>
           </div>
           <div class="promo-card">
-            <img src="./images/bill.png" alt="Bill Payments & Recharges" class="promo-image" />
+            <img
+              src="./images/bill.png"
+              alt="Bill Payments & Recharges"
+              class="promo-image"
+            />
             <div class="promo-title">Bill Payments & Recharges</div>
           </div>
           <div class="promo-card">
-            <img src="./images/bus.png" alt="Bus Reservations" class="promo-image" />
+            <img
+              src="./images/bus.png"
+              alt="Bus Reservations"
+              class="promo-image"
+            />
             <div class="promo-title">Bus Reservations</div>
           </div>
           <div class="promo-card">
-            <img src="./images/banking.png" alt="Mobile Banking" class="promo-image" />
+            <img
+              src="./images/banking.png"
+              alt="Mobile Banking"
+              class="promo-image"
+            />
             <div class="promo-title">Seamless Mobile Banking Experience</div>
           </div>
           <div class="promo-card">
-            <img src="./images/digital.png" alt="Digital Engagement" class="promo-image" />
+            <img
+              src="./images/digital.png"
+              alt="Digital Engagement"
+              class="promo-image"
+            />
             <div class="promo-title">Smart Digital Engagement</div>
           </div>
         </div>

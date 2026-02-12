@@ -62,3 +62,46 @@ END:VCARD`;
         btn.style.background = '';
     }, 2000);
 }
+
+// ==================== APK DOWNLOAD FUNCTION ====================
+
+function downloadAPK() {
+    // -------------------------------------------------------
+    // IMPORTANT: Replace the URL below with the actual path
+    // or hosted URL of your APK file before deploying.
+    //
+    // Examples:
+    //   Local (same server):  './app/RashtriyaSamruddhi.apk'
+    //   CDN / cloud storage:  'https://your-cdn.com/RashtriyaSamruddhi.apk'
+    //   Google Drive (direct link):
+    //     'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID'
+    // -------------------------------------------------------
+    const apkURL = './app/RASHTRIYA SAMRUDDHI SOUHARDA SAHAKARI SANGHA NIYAMITA.apk';
+
+    const btn = document.querySelector('.apk-download-btn');
+    const originalHTML = btn.innerHTML;
+
+    // Visual feedback while initiating download
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing Download...';
+    btn.disabled = true;
+
+    // Create a hidden anchor and trigger download
+    const link = document.createElement('a');
+    link.href = apkURL;
+    link.download = 'RASHTRIYA SAMRUDDHI SOUHARDA SAHAKARI SANGHA NIYAMITA.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Restore button after short delay
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> Download Started!';
+        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = '';
+            btn.disabled = false;
+        }, 3000);
+    }, 800);
+}
