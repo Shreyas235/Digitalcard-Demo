@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kishore V</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Modern Contact Card -->
+      <div class="modern-contact-card">
+        <!-- Top Header -->
+        <div class="card-header">
+          <div class="header-left">
+            <img src="./images/logo.png" alt="Logo" class="header-logo" />
+            <div class="header-info">
+              <h1 class="header-title">Kishore V</h1>
+              <p class="header-subtitle">Business Manager</p>
+            </div>
+          </div>
+          <button class="share-btn" onclick="shareCard()">
+            <i class="fas fa-share-alt"></i>
+          </button>
+        </div>
+
+        <!-- Banner Section -->
+        <div class="banner-section">
+          <img
+            src="./images/About us 1.png"
+            alt="Background"
+            class="banner-bg"
+          />
+          <div class="banner-overlay">
+            <img src="./images/logo.png" alt="Profile" class="banner-logo" />
+            <h2 class="banner-title">Kishore V - Business Manager</h2>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="call-btn" onclick="makeCall('8749060661')">
+            <i class="fas fa-phone"></i> Kishore V
+          </button>
+          <button
+            class="whatsapp-btn"
+            onclick="openWhatsApp('918749060661', 'Kishore V')"
+          >
+            <i class="fab fa-whatsapp"></i> Kishore V
+          </button>
+        </div>
+
+        <!-- Email Button -->
+        <div class="action-buttons">
+          <a href="mailto:kishorekulal7795@gmail.com" class="email-btn">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+        </div>
+
+        <!-- Save Contact -->
+        <div class="save-contact-wrapper">
+          <button class="save-contact-modern" onclick="saveContactModern()">
+            <i class="fas fa-download"></i> Save Contact
+          </button>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+          <div class="about-header">
+            <i class="fas fa-user"></i>
+            <h3>About Me</h3>
+          </div>
+          <p class="about-text">
+            I am Kishore V, Working at BK'S Solutions as a Business Manager and
+            my role is consulting Business On-boarding Partners and training
+            Business Development Executives and work in implementing process of
+            our customers in all our registered services.
+          </p>
+        </div>
+      </div>
+      <!-- /.modern-contact-card -->
+
+      <!-- Social Media Section -->
+      <div class="social-media-section">
+        <p class="social-media-text">Follow Us On</p>
+        <div class="social-media-icons">
+          <a
+            href="YOUR_INSTAGRAM_URL"
+            class="social-link instagram"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="YOUR_FACEBOOK_URL"
+            class="social-link facebook"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="mailto:kishorekulal7795@gmail.com" class="social-link email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://wa.me/918749060661"
+            class="social-link whatsapp"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="services-section">
+        <div class="services-header">
+          <i class="fas fa-briefcase"></i>
+          <h3>Our Services</h3>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <img
+              src="./images/digital marketing 1.png"
+              alt="Service 1"
+              class="service-img"
+            />
+            <p class="service-title">Digital Marketing</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/custom web app development 1.png"
+              alt="Service 2"
+              class="service-img"
+            />
+            <p class="service-title">Custom Web and App Development</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/business consulting 1.png"
+              alt="Service 2"
+              class="service-img"
+            />
+            <p class="service-title">Business Consulting</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Branding 1.png"
+              alt="Service 2"
+              class="service-img"
+            />
+            <p class="service-title">Branding & Design</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Custom software solution 1.png"
+              alt="Service 2"
+              class="service-img"
+            />
+            <p class="service-title">Custom Software Solution</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/business automation training 1.png"
+              alt="Service 2"
+              class="service-img"
+            />
+            <p class="service-title">Business Automation Training</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Views Counter -->
+      <section class="views-counter-section">
+        <div class="views-counter-container">
+          <p class="views-title">Total Views</p>
+          <div class="view-counter" id="viewCounter">
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d344.6062273495691!2d76.64650027274062!3d12.263540338244056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6f2632232277%3A0x63fcff4c3924d9a6!2sBK&#39;S%20Solutions!5e0!3m2!1sen!2sin!4v1771336876899!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="location"
+        ></iframe> 
+      </div>
+    </div>
+    <!-- /#main-container -->
+  </body>
+</html>

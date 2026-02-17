@@ -1,0 +1,520 @@
+/* ==================== GLOBAL STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+#main-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* ==================== MODERN CONTACT CARD ==================== */
+
+.modern-contact-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  width: auto;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  color: #525252;
+  margin: 0;
+}
+
+.share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.share-btn:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.share-btn i {
+  font-size: 1.1rem;
+}
+
+/* Banner Section */
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.banner-logo {
+  width: 150px;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 15px 20px 0;
+}
+
+.call-btn {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background: #3b82f6;
+}
+
+.call-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.whatsapp-btn {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #25d366;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Email Button */
+.action-buttons:has(.email-btn) {
+  grid-template-columns: 1fr;
+}
+
+.email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #ea4335;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.email-btn:hover {
+  background: #d33426;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.4);
+}
+
+/* Save Contact */
+.save-contact-wrapper {
+  padding: 15px 20px;
+}
+
+.save-contact-modern {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.save-contact-modern:hover {
+  background: #f5f5f5;
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+/* ==================== ABOUT SECTION ==================== */
+
+.about-section {
+  padding: 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.about-header i {
+  font-size: 1.4rem;
+  color: #3b82f6;
+}
+
+.about-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 480px) {
+  .card-header {
+    padding: 15px 20px;
+  }
+
+  .header-logo {
+    height: 60px;
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .banner-section {
+    height: 240px;
+  }
+
+  .banner-logo {
+    width: 120px;
+    height: 145px;
+  }
+
+  .banner-title {
+    font-size: 1.2rem;
+  }
+
+  .action-buttons {
+    padding: 12px 15px 0;
+    gap: 10px;
+  }
+
+  .call-btn,
+  .whatsapp-btn {
+    font-size: 0.9rem;
+    padding: 12px 14px;
+  }
+
+  .save-contact-wrapper {
+    padding: 12px 15px;
+  }
+}
+
+/* ==================== SOCIAL MEDIA ==================== */
+
+.social-media-section {
+  background: white;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.social-media-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-link.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-link.facebook  { background: #1877F2; }
+.social-link.email     { background: #EA4335; }
+.social-link.whatsapp  { background: #25D366; }
+
+/* ==================== SERVICES SECTION ==================== */
+
+.services-section {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.services-header i {
+  font-size: 1.4rem;
+  color: #3b82f6;
+}
+
+.services-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.1)  0px 2px 1px;
+}
+
+.service-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+/* ==================== VIEWS COUNTER ==================== */
+
+.views-counter-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.views-counter-container {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.views-title {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.view-counter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.digit {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Courier New', monospace;
+}
+
+/* ==================== MAP ==================== */
+
+.map {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.location {
+  width: 100%;
+  height: 450px;
+  border: none;
+  display: block;
+}
+
+/* ==================== RESPONSIVE ADDITIONS ==================== */
+
+@media (max-width: 480px) {
+  .social-link       { width: 52px; height: 52px; font-size: 1.4rem; }
+  .social-media-icons { gap: 15px; }
+  .service-img       { height: 95px; }
+  .service-title     { font-size: 0.82rem; }
+  .digit             { font-size: 1.5rem; }
+  .view-counter      { gap: 8px; }
+}
