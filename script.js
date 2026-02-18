@@ -1,5 +1,47 @@
 // ==================== CONTACT FUNCTIONS ====================
 
+// ==================== CONTACT FORM ====================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name    = form.querySelector('input[name="name"]').value.trim();
+    const email   = form.querySelector('input[name="email"]').value.trim();
+    const phone   = form.querySelector('input[name="phone"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+
+    const checkedServices = Array.from(
+      form.querySelectorAll('input[name="service"]:checked')
+    ).map((cb) => cb.value);
+
+    if (checkedServices.length === 0) {
+      alert("Please select at least one service.");
+      return;
+    }
+
+    const text =
+`Hello! I'm interested in your services.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Services: ${checkedServices.join(", ")}
+Message: ${message || "N/A"}`;
+
+    const phoneNumber = "917406051534";
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`,
+      "_blank"
+    );
+
+    form.reset();
+  });
+});
+
 function makeCall(phoneNumber) {
   window.location.href = `tel:${phoneNumber}`;
 }
@@ -70,45 +112,13 @@ END:VCARD`;
   }, 2000);
 }
 
-// ==================== VISIT COUNTER ====================
+// ==================== SERVICE ENQUIRY ====================
 
-function getVisitCount() {
-  const visits = localStorage.getItem('siteVisits');
-  return visits === null ? 0 : parseInt(visits);
+function enquireService(serviceName) {
+  const phoneNumber = "917406051534";
+  const message = `Hello! I'm interested in learning more about your ${serviceName} services. Could you please provide me with more details?`;
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
 }
-
-function incrementVisitCount() {
-  const visits = getVisitCount() + 1;
-  localStorage.setItem('siteVisits', visits);
-  return visits;
-}
-
-function displayVisitCount() {
-  const currentVisits = incrementVisitCount();
-  const digitsContainer = document.getElementById('viewCounter');
-  if (!digitsContainer) return;
-
-  const visitsStr = currentVisits.toString().padStart(5, '0');
-  const digits = digitsContainer.querySelectorAll('.digit');
-
-  digits.forEach((digit, index) => {
-    animateDigit(digit, parseInt(visitsStr[index]), index * 100);
-  });
-}
-
-function animateDigit(digitElement, finalValue, delay) {
-  setTimeout(() => {
-    let currentValue = 0;
-    const interval = setInterval(() => {
-      digitElement.textContent = currentValue;
-      if (currentValue === finalValue) {
-        clearInterval(interval);
-      } else {
-        currentValue++;
-      }
-    }, 30);
-  }, delay);
-}
-
-// Run on load
-displayVisitCount();
