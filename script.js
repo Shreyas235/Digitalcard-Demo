@@ -116,7 +116,7 @@ END:VCARD`;
 
 function enquireService(serviceName) {
   const phoneNumber = "917406051534";
-  const message = `Hello! I'm interested in learning more about your ${serviceName} services. Could you please provide me with more details?`;
+  const message = `Hello! I'm interested in knowing more about your ${serviceName} services. Could you please provide me with more details?`;
   window.open(
     `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
     "_blank"
