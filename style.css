@@ -129,7 +129,7 @@ body {
 }
 
 .banner-logo {
-  width: 150px;
+  width: 140px;
   height: 180px;
   border-radius: 15px;
   object-fit: cover;
@@ -299,6 +299,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.7;
   color: #555;
+  text-align: justify;
 }
 
 /* ==================== TEAM SECTION ==================== */
