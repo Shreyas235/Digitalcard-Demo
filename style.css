@@ -29,6 +29,11 @@ body {
   padding: 16px 0 40px;
 }
 
+#outer-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
 #main-container {
   max-width: 900px;
   margin: 0 auto;
