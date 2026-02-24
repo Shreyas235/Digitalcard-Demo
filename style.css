@@ -510,29 +510,23 @@ body {
   gap: 10px;
 }
 
-.gallery-item {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-  background: var(--green-pale);
-  border: 1.5px solid var(--accent);
-}
-
+/* ── Gallery items: auto height so the full image shows ── */
+.gallery-item,
 .gallery-item-hw {
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-  height: 430px;
+  height: auto;           /* removed fixed height — image determines height */
   background: var(--green-pale);
   border: 1.5px solid var(--accent);
+  line-height: 0;         /* removes gap below inline img */
 }
 
 .gallery-item img,
 .gallery-item-hw img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;           /* natural aspect ratio */
+  object-fit: contain;   /* show whole image, no cropping */
   display: block;
 }
 
@@ -649,13 +643,17 @@ body {
   .pdf-icon { width: 32px; height: 32px; }
   .pdf-icon i { font-size: 1.1rem; }
 
+  /* On mobile: single column so each image gets full width */
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .gallery-item { height: 300px; }
-  .gallery-item-hw { height: 320px; }
+  /* height stays auto — images show at natural size */
+  .gallery-item,
+  .gallery-item-hw {
+    height: auto;
+  }
 
   .location { height: 260px; }
 }
