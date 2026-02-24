@@ -5,201 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premalatha - CHIGURU</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="outer-wrapper">
-      <div id="main-container">
-        <!-- Modern Contact Card -->
-        <div class="modern-contact-card">
-          <!-- Top Header -->
-          <div class="card-header">
-            <div class="header-left">
-              <div class="header-logo-wrap">
-                <img src="./images/logo.png" alt="CHIGURU Logo" class="header-logo" />
-              </div>
-              <div class="header-info">
-                <h1 class="header-title">Premalatha</h1>
-                <p class="header-subtitle">CHIGURU Plant Gifting</p>
-              </div>
-            </div>
-            <button class="share-btn" onclick="shareCard()">
-              <i class="fas fa-share-alt"></i>
-            </button>
-          </div>
+    <div id="main-container">
 
-          <!-- Banner Section -->
-          <div class="banner-section">
-            <div class="banner-overlay">
-              <div class="leaf-deco leaf-1">🌿</div>
-              <div class="leaf-deco leaf-2">🍃</div>
-              <div class="leaf-deco leaf-3">🌱</div>
-              <div class="banner-content">
-                <div class="banner-badge">est. June 2024</div>
-                <h2 class="banner-title">CHIGURU</h2>
-                <p class="banner-tagline">ಹಸಿರಿನೆಡೆಗೆ ಒಂದು ಹೆಜ್ಜೆ</p>
-                <p class="banner-sub">Plant Gifting — Mysore</p>
-              </div>
+      <!-- Modern Contact Card -->
+      <div class="modern-contact-card">
+
+        <!-- Top Header -->
+        <div class="card-header">
+          <div class="header-left">
+            <div class="header-logo-wrap">
+              <img src="./images/logo.png" alt="CHIGURU Logo" class="header-logo" />
+            </div>
+            <div class="header-info">
+              <h1 class="header-title">Premalatha</h1>
+              <p class="header-subtitle">CHIGURU Plant Gifting</p>
             </div>
           </div>
-
-          <!-- Action Buttons -->
-          <div class="action-buttons two-col">
-            <button class="call-btn" onclick="makeCall('9449280481')">
-              <i class="fas fa-phone"></i> Call Us
-            </button>
-            <button class="whatsapp-btn" onclick="openWhatsApp('919449280481', 'CHIGURU')">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </button>
-          </div>
-
-          <div class="action-buttons one-col">
-            <a href="mailto:chigurugreens@gmail.com" class="email-btn">
-              <i class="fas fa-envelope"></i> Email Us
-            </a>
-          </div>
-
-          <!-- Save Contact -->
-          <div class="save-contact-wrapper">
-            <button class="save-contact-modern" onclick="saveContactModern()">
-              <i class="fas fa-download"></i> Save Contact
-            </button>
-          </div>
-
-          <!-- About Section -->
-          <div class="about-section">
-            <div class="section-header">
-              <i class="fas fa-seedling"></i>
-              <h3>About Us</h3>
-            </div>
-            <p class="about-text">
-              At CHIGURU, we specialize in plant gifting and have been nurturing
-              this passion, a startup since June 2024. Based in Mysore, we offer a
-              unique way to enhance your connection with nature through our
-              customizable, budget-friendly indoor plant solutions. Whether you're
-              celebrating achievements, milestones, birthdays, anniversaries,
-              conferences, or any special event, CHIGURU provides a range of
-              indoor plants. Embrace the green gifting lifestyle with CHIGURU
-              potted indoor plants. We also cater to bulk orders for events.
-            </p>
-          </div>
-
-          <!-- Contact Details Section -->
-          <div class="contact-details-section">
-            <div class="section-header">
-              <i class="fas fa-address-card"></i>
-              <h3>Contact Details</h3>
-            </div>
-            <div class="contact-detail-item">
-              <i class="fas fa-phone"></i>
-              <span>9449280481</span>
-            </div>
-            <div class="contact-detail-item">
-              <i class="fas fa-envelope"></i>
-              <span>chigurugreens@gmail.com</span>
-            </div>
-            <div class="contact-detail-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>No. 2409, 1st Cross, Hosa Bandikeri, Nanjumalige Circle, Mysore</span>
-            </div>
-          </div>
-
-          <!-- PDF Section -->
-          <div class="pdf-section">
-            <div class="section-header">
-              <i class="fas fa-file-pdf"></i>
-              <h3>Our Brochures</h3>
-            </div>
-            <div class="pdf-grid">
-              <a href="./images/Chiguru Portfolio.pdf" target="_blank" class="pdf-card">
-                <div class="pdf-icon">
-                  <i class="fas fa-file-pdf"></i>
-                </div>
-                <div class="pdf-info">
-                  <p class="pdf-title">Chiguru Portfolio</p>
-                  <p class="pdf-sub">Tap to open</p>
-                </div>
-                <i class="fas fa-arrow-down pdf-download"></i>
-              </a>
-              <a href="./images/Chiguru Greens PPT.pdf" target="_blank" class="pdf-card">
-                <div class="pdf-icon">
-                  <i class="fas fa-file-pdf"></i>
-                </div>
-                <div class="pdf-info">
-                  <p class="pdf-title">Chiguru Greens PPT</p>
-                  <p class="pdf-sub">Tap to open</p>
-                </div>
-                <i class="fas fa-arrow-down pdf-download"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Photo Gallery Section -->
-          <div class="gallery-section">
-            <div class="section-header">
-              <i class="fas fa-images"></i>
-              <h3>Gallery</h3>
-            </div>
-            <div class="gallery-grid">
-              <div class="gallery-item-hw">
-                <img src="./images/Saplings New.jpeg" alt="Gallery Photo 1" />
-              </div>
-              <div class="gallery-item-hw">
-                <img src="./images/Chiguru.jpeg" alt="Gallery Photo 2" />
-              </div>
-              <div class="gallery-item">
-                <img src="./images/Chiguru (21-07).jpeg" alt="Gallery Photo 3" />
-              </div>
-            </div>
-          </div>
-
+          <button class="share-btn" onclick="shareCard()">
+            <i class="fas fa-share-alt"></i>
+          </button>
         </div>
-        <!-- /.modern-contact-card -->
 
-        <!-- Social Media Section -->
-        <div class="social-media-section">
-          <p class="social-media-text">Follow Us On</p>
-          <div class="social-media-icons">
-            <a
-              href="https://www.instagram.com/chiguru_greens?igsh=MTcyYnhheXdndmJsNw=="
-              class="social-link instagram"
-              target="_blank"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:chigurugreens@gmail.com" class="social-link email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/919449280481" class="social-link whatsapp" target="_blank">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+        <!-- Banner Section -->
+        <div class="banner-section">
+          <div class="banner-overlay">
+            <div class="leaf-deco leaf-1">🌿</div>
+            <div class="leaf-deco leaf-2">🍃</div>
+            <div class="leaf-deco leaf-3">🌱</div>
+            <div class="banner-content">
+              <div class="banner-badge">est. June 2024</div>
+              <h2 class="banner-title">CHIGURU</h2>
+              <p class="banner-tagline">ಹಸಿರಿನೆಡೆಗೆ ಒಂದು ಹೆಜ್ಜೆ</p>
+              <p class="banner-sub">Plant Gifting — Mysore</p>
+            </div>
           </div>
         </div>
 
-        <!-- Map -->
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.3409723958093!2d76.64638397506508!3d12.292809287963669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE3JzM0LjEiTiA3NsKwMzgnNTYuMyJF!5e0!3m2!1sen!2sin!4v1771853961165!5m2!1sen!2sin"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="location"
-          ></iframe>
+        <!-- Action Buttons -->
+        <div class="action-buttons two-col">
+          <button class="call-btn" onclick="makeCall('9449280481')">
+            <i class="fas fa-phone"></i> Call Us
+          </button>
+          <button class="whatsapp-btn" onclick="openWhatsApp('919449280481', 'CHIGURU')">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </button>
+        </div>
+
+        <div class="action-buttons one-col">
+          <a href="mailto:chigurugreens@gmail.com" class="email-btn">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+        </div>
+
+        <!-- Save Contact -->
+        <div class="save-contact-wrapper">
+          <button class="save-contact-modern" onclick="saveContactModern()">
+            <i class="fas fa-download"></i> Save Contact
+          </button>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+          <div class="section-header">
+            <i class="fas fa-seedling"></i>
+            <h3>About Us</h3>
+          </div>
+          <p class="about-text">
+            At CHIGURU, we specialize in plant gifting and have been nurturing
+            this passion, a startup since June 2024. Based in Mysore, we offer a
+            unique way to enhance your connection with nature through our
+            customizable, budget-friendly indoor plant solutions. Whether you're
+            celebrating achievements, milestones, birthdays, anniversaries,
+            conferences, or any special event, CHIGURU provides a range of
+            indoor plants. Embrace the green gifting lifestyle with CHIGURU
+            potted indoor plants. We also cater to bulk orders for events.
+          </p>
+        </div>
+
+        <!-- Contact Details Section -->
+        <div class="contact-details-section">
+          <div class="section-header">
+            <i class="fas fa-address-card"></i>
+            <h3>Contact Details</h3>
+          </div>
+          <div class="contact-detail-item">
+            <i class="fas fa-phone"></i>
+            <span>9449280481</span>
+          </div>
+          <div class="contact-detail-item">
+            <i class="fas fa-envelope"></i>
+            <span>chigurugreens@gmail.com</span>
+          </div>
+          <div class="contact-detail-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>No. 2409, 1st Cross, Hosa Bandikeri, Nanjumalige Circle, Mysore</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.modern-contact-card -->
+
+      <!-- PDF / Brochures Section -->
+      <div class="pdf-section-card">
+        <div class="section-header">
+          <i class="fas fa-file-pdf"></i>
+          <h3>Our Brochures</h3>
+        </div>
+        <div class="pdf-grid">
+          <a href="./images/Chiguru Portfolio.pdf" target="_blank" class="pdf-card">
+            <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="pdf-info">
+              <p class="pdf-title">Chiguru Portfolio</p>
+              <p class="pdf-sub">Tap to open</p>
+            </div>
+            <i class="fas fa-arrow-down pdf-download"></i>
+          </a>
+          <a href="./images/Chiguru Greens PPT.pdf" target="_blank" class="pdf-card">
+            <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="pdf-info">
+              <p class="pdf-title">Chiguru Greens PPT</p>
+              <p class="pdf-sub">Tap to open</p>
+            </div>
+            <i class="fas fa-arrow-down pdf-download"></i>
+          </a>
         </div>
       </div>
-      <!-- /#main-container -->
+
+      <!-- Gallery Section -->
+      <div class="gallery-section-card">
+        <div class="section-header">
+          <i class="fas fa-images"></i>
+          <h3>Gallery</h3>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item-hw">
+            <img src="./images/Saplings New.jpeg" alt="Gallery Photo 1" />
+          </div>
+          <div class="gallery-item-hw">
+            <img src="./images/Chiguru.jpeg" alt="Gallery Photo 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/Chiguru (21-07).jpeg" alt="Gallery Photo 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="social-media-section">
+        <p class="social-media-text">Follow Us On</p>
+        <div class="social-media-icons">
+          <a href="https://www.instagram.com/chiguru_greens?igsh=MTcyYnhheXdndmJsNw==" class="social-link instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:chigurugreens@gmail.com" class="social-link email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/919449280481" class="social-link whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.3409723958093!2d76.64638397506508!3d12.292809287963669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE3JzM0LjEiTiA3NsKwMzgnNTYuMyJF!5e0!3m2!1sen!2sin!4v1771853961165!5m2!1sen!2sin"
+          width="600" height="450" style="border: 0"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="location"
+        ></iframe>
+      </div>
+
     </div>
-    <!-- /#outer-wrapper -->
+    <!-- /#main-container -->
   </body>
 </html>
