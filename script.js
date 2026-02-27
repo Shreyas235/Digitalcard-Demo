@@ -1,38 +1,29 @@
 /* ============================================================
    CHIGURU — script.js
-   Interactions: Counter animation, Scroll reveal, Parallax
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 1. ANIMATED COUNTER (Hero stats) ───────────────────────
+  // ── 1. ANIMATED COUNTER ────────────────────────────────────
   const statNums = document.querySelectorAll('.stat-num');
 
-  const formatNum = (n, target) => {
-    if (target >= 1000) return n.toLocaleString('en-IN');
-    return n;
-  };
+  const formatNum = (n, target) => target >= 1000 ? n.toLocaleString('en-IN') : n;
 
   const animateCounter = (el) => {
     const target = parseInt(el.dataset.target, 10);
     const duration = target >= 1000 ? 2000 : 1000;
     const startTime = performance.now();
-
     const step = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out quart
       const eased = 1 - Math.pow(1 - progress, 4);
-      const current = Math.round(eased * target);
-      el.textContent = formatNum(current, target);
+      el.textContent = formatNum(Math.round(eased * target), target);
       if (progress < 1) requestAnimationFrame(step);
       else el.textContent = formatNum(target, target);
     };
-
     requestAnimationFrame(step);
   };
 
-  // Use IntersectionObserver to trigger counters when hero is visible
   const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -57,9 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => el.classList.add('reveal'));
 
   const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Stagger delay based on sibling index
         const siblings = [...entry.target.parentElement.children];
         const idx = siblings.indexOf(entry.target);
         entry.target.style.transitionDelay = `${idx * 80}ms`;
@@ -72,42 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => revealObserver.observe(el));
 
 
-  // ── 3. SMOOTH SECTION NAVIGATION (scroll hint) ─────────────
+  // ── 3. SMOOTH SCROLL ───────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
 
-  // ── 4. SERVICE CARD — HOVER TILT EFFECT ────────────────────
-  const cards = document.querySelectorAll('.service-card');
-
-  cards.forEach(card => {
+  // ── 4. SERVICE CARD TILT ───────────────────────────────────
+  document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rotateX = ((y - cy) / cy) * -5;
-      const rotateY = ((x - cx) / cx) * 5;
+      const rotateX = ((e.clientY - rect.top  - rect.height / 2) / (rect.height / 2)) * -5;
+      const rotateY = ((e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2)) *  5;
       card.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      card.style.transformOrigin = 'center center';
     });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-      card.style.transformOrigin = '';
-    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 
 
-  // ── 5. PARALLAX — Hero headline on scroll ──────────────────
+  // ── 5. HERO PARALLAX ───────────────────────────────────────
   const heroHeadline = document.querySelector('.hero-headline');
   const heroBadge    = document.querySelector('.brand-badge');
 
@@ -117,40 +94,36 @@ document.addEventListener('DOMContentLoaded', () => {
       heroHeadline.style.transform = `translateY(${scrollY * 0.18}px)`;
       heroHeadline.style.opacity   = `${1 - scrollY * 0.002}`;
     }
-    if (heroBadge) {
-      heroBadge.style.transform = `translateY(${scrollY * 0.08}px)`;
-    }
+    if (heroBadge) heroBadge.style.transform = `translateY(${scrollY * 0.08}px)`;
   }, { passive: true });
 
 
-  // ── 6. CLIENTS TRACK — Pause on hover ──────────────────────
+  // ── 6. CLIENTS TRACK PAUSE ON HOVER ────────────────────────
   const track = document.getElementById('clientsTrack');
   if (track) {
-    track.addEventListener('mouseenter', () => {
-      track.style.animationPlayState = 'paused';
-    });
-    track.addEventListener('mouseleave', () => {
-      track.style.animationPlayState = 'running';
-    });
+    track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+    track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
   }
 
 
-  // ── 7. CONTACT CARDS — Ripple on click ─────────────────────
+  // ── 7. CONTACT CARD RIPPLE ─────────────────────────────────
+  const rippleStyle = document.createElement('style');
+  rippleStyle.textContent = `@keyframes rippleAnim { to { transform: scale(1); opacity: 0; } }`;
+  document.head.appendChild(rippleStyle);
+
   document.querySelectorAll('.contact-card').forEach(card => {
     card.addEventListener('click', function (e) {
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 1.5;
       const ripple = document.createElement('span');
-      const rect   = this.getBoundingClientRect();
-      const size   = Math.max(rect.width, rect.height) * 1.5;
       ripple.style.cssText = `
-        position: absolute;
-        left: ${e.clientX - rect.left - size / 2}px;
-        top:  ${e.clientY - rect.top  - size / 2}px;
-        width: ${size}px; height: ${size}px;
-        border-radius: 50%;
-        background: rgba(26, 74, 14, 0.1);
-        transform: scale(0);
-        animation: rippleAnim 0.6s ease-out forwards;
-        pointer-events: none;
+        position:absolute; border-radius:50%; pointer-events:none;
+        left:${e.clientX - rect.left - size / 2}px;
+        top:${e.clientY - rect.top - size / 2}px;
+        width:${size}px; height:${size}px;
+        background:rgba(26,74,14,0.1);
+        transform:scale(0);
+        animation:rippleAnim 0.6s ease-out forwards;
       `;
       this.style.position = 'relative';
       this.style.overflow = 'hidden';
@@ -159,20 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Inject ripple keyframes dynamically
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = `
-    @keyframes rippleAnim {
-      to { transform: scale(1); opacity: 0; }
-    }
-  `;
-  document.head.appendChild(styleSheet);
 
-
-  // ── 8. LOGO EMBLEM — Spin on click ─────────────────────────
+  // ── 8. LOGO SPIN ON CLICK ──────────────────────────────────
   const emblem = document.querySelector('.logo-emblem');
   if (emblem) {
-    emblem.style.cursor = 'pointer';
     emblem.addEventListener('click', () => {
       emblem.style.transition = 'transform 0.8s cubic-bezier(0.34,1.56,0.64,1)';
       emblem.style.transform = 'rotate(360deg) scale(1.1)';
@@ -183,6 +146,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-  console.log('🌿 Chiguru — script loaded successfully');
 });
