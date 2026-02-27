@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── 1. ANIMATED COUNTER ────────────────────────────────────
   const statNums = document.querySelectorAll('.stat-num');
-
   const formatNum = (n, target) => target >= 1000 ? n.toLocaleString('en-IN') : n;
 
   const animateCounter = (el) => {
@@ -14,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const duration = target >= 1000 ? 2000 : 1000;
     const startTime = performance.now();
     const step = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
+      const progress = Math.min((currentTime - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 4);
       el.textContent = formatNum(Math.round(eased * target), target);
       if (progress < 1) requestAnimationFrame(step);
@@ -50,8 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const siblings = [...entry.target.parentElement.children];
-        const idx = siblings.indexOf(entry.target);
+        const idx = [...entry.target.parentElement.children].indexOf(entry.target);
         entry.target.style.transitionDelay = `${idx * 80}ms`;
         entry.target.classList.add('visible');
         revealObserver.unobserve(entry.target);
@@ -62,17 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => revealObserver.observe(el));
 
 
-  // ── 3. SMOOTH SCROLL ───────────────────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-
-  // ── 4. SERVICE CARD TILT ───────────────────────────────────
+  // ── 3. SERVICE CARD TILT ───────────────────────────────────
   document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -84,21 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 5. HERO PARALLAX ───────────────────────────────────────
-  const heroHeadline = document.querySelector('.hero-headline');
-  const heroBadge    = document.querySelector('.brand-badge');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    if (heroHeadline) {
-      heroHeadline.style.transform = `translateY(${scrollY * 0.18}px)`;
-      heroHeadline.style.opacity   = `${1 - scrollY * 0.002}`;
-    }
-    if (heroBadge) heroBadge.style.transform = `translateY(${scrollY * 0.08}px)`;
-  }, { passive: true });
-
-
-  // ── 6. CLIENTS TRACK PAUSE ON HOVER ────────────────────────
+  // ── 4. CLIENTS TRACK PAUSE ON HOVER ────────────────────────
   const track = document.getElementById('clientsTrack');
   if (track) {
     track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
@@ -106,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ── 7. CONTACT CARD RIPPLE ─────────────────────────────────
+  // ── 5. CONTACT CARD RIPPLE ─────────────────────────────────
   const rippleStyle = document.createElement('style');
   rippleStyle.textContent = `@keyframes rippleAnim { to { transform: scale(1); opacity: 0; } }`;
   document.head.appendChild(rippleStyle);
@@ -133,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 8. LOGO SPIN ON CLICK ──────────────────────────────────
+  // ── 6. LOGO SPIN ON CLICK ──────────────────────────────────
   const emblem = document.querySelector('.logo-emblem');
   if (emblem) {
     emblem.addEventListener('click', () => {
