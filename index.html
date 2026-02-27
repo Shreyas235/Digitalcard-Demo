@@ -1,188 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premalatha - CHIGURU</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div id="main-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chiguru — Quality Plants</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
 
-      <!-- Modern Contact Card -->
-      <div class="modern-contact-card">
+  <!-- Animated background leaves -->
+  <div class="bg-leaves" aria-hidden="true">
+    <div class="bg-leaf bl1">🌿</div>
+    <div class="bg-leaf bl2">🍃</div>
+    <div class="bg-leaf bl3">🌱</div>
+    <div class="bg-leaf bl4">🍃</div>
+    <div class="bg-leaf bl5">🌿</div>
+    <div class="bg-leaf bl6">🌱</div>
+  </div>
 
-        <!-- Top Header -->
-        <div class="card-header">
-          <div class="header-left">
-            <div class="header-logo-wrap">
-              <img src="./images/logo.png" alt="CHIGURU Logo" class="header-logo" />
-            </div>
-            <div class="header-info">
-              <h1 class="header-title">Premalatha</h1>
-              <p class="header-subtitle">CHIGURU Plant Gifting</p>
-            </div>
-          </div>
-          <button class="share-btn" onclick="shareCard()">
-            <i class="fas fa-share-alt"></i>
-          </button>
-        </div>
-
-        <!-- Banner Section -->
-        <div class="banner-section">
-          <div class="banner-overlay">
-            <div class="leaf-deco leaf-1">🌿</div>
-            <div class="leaf-deco leaf-2">🍃</div>
-            <div class="leaf-deco leaf-3">🌱</div>
-            <div class="banner-content">
-              <div class="banner-badge">est. June 2024</div>
-              <h2 class="banner-title">CHIGURU</h2>
-              <p class="banner-tagline">ಹಸಿರಿನೆಡೆಗೆ ಒಂದು ಹೆಜ್ಜೆ</p>
-              <p class="banner-sub">Plant Gifting — Mysore</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="action-buttons two-col">
-          <button class="call-btn" onclick="makeCall('9449280481')">
-            <i class="fas fa-phone"></i> Call Us
-          </button>
-          <button class="whatsapp-btn" onclick="openWhatsApp('919449280481', 'CHIGURU')">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </button>
-        </div>
-
-        <div class="action-buttons one-col">
-          <a href="mailto:chigurugreens@gmail.com" class="email-btn">
-            <i class="fas fa-envelope"></i> Email Us
-          </a>
-        </div>
-
-        <!-- Save Contact -->
-        <div class="save-contact-wrapper">
-          <button class="save-contact-modern" onclick="saveContactModern()">
-            <i class="fas fa-download"></i> Save Contact
-          </button>
-        </div>
-
-        <!-- About Section -->
-        <div class="about-section">
-          <div class="section-header">
-            <i class="fas fa-seedling"></i>
-            <h3>About Us</h3>
-          </div>
-          <p class="about-text">
-            At CHIGURU, we specialize in plant gifting and have been nurturing
-            this passion, a startup since June 2024. Based in Mysore, we offer a
-            unique way to enhance your connection with nature through our
-            customizable, budget-friendly indoor plant solutions. Whether you're
-            celebrating achievements, milestones, birthdays, anniversaries,
-            conferences, or any special event, CHIGURU provides a range of
-            indoor plants. Embrace the green gifting lifestyle with CHIGURU
-            potted indoor plants. We also cater to bulk orders for events.
-          </p>
-        </div>
-
-        <!-- Contact Details Section -->
-        <div class="contact-details-section">
-          <div class="section-header">
-            <i class="fas fa-address-card"></i>
-            <h3>Contact Details</h3>
-          </div>
-          <div class="contact-detail-item">
-            <i class="fas fa-phone"></i>
-            <span>9449280481</span>
-          </div>
-          <div class="contact-detail-item">
-            <i class="fas fa-envelope"></i>
-            <span>chigurugreens@gmail.com</span>
-          </div>
-          <div class="contact-detail-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>No. 2409, 1st Cross, Hosa Bandikeri, Nanjumalige Circle, Mysore</span>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.modern-contact-card -->
-
-      <!-- PDF / Brochures Section -->
-      <div class="pdf-section-card">
-        <div class="section-header">
-          <i class="fas fa-file-pdf"></i>
-          <h3>Our Brochures</h3>
-        </div>
-        <div class="pdf-grid">
-          <a href="./images/Chiguru Portfolio.pdf" target="_blank" class="pdf-card">
-            <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
-            <div class="pdf-info">
-              <p class="pdf-title">Chiguru Portfolio</p>
-              <p class="pdf-sub">Tap to open</p>
-            </div>
-            <i class="fas fa-arrow-down pdf-download"></i>
-          </a>
-          <a href="./images/Chiguru Greens PPT.pdf" target="_blank" class="pdf-card">
-            <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
-            <div class="pdf-info">
-              <p class="pdf-title">Chiguru Greens PPT</p>
-              <p class="pdf-sub">Tap to open</p>
-            </div>
-            <i class="fas fa-arrow-down pdf-download"></i>
-          </a>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="brand-badge">Est. June 2024 · Mysore</div>
+      <div class="hero-logo">
+        <div class="logo-emblem">
+          <img src="./images/logo.png" alt="Chiguru Logo" class="logo-img" />
         </div>
       </div>
-
-      <!-- Gallery Section -->
-      <div class="gallery-section-card">
-        <div class="section-header">
-          <i class="fas fa-images"></i>
-          <h3>Gallery</h3>
+      <h1 class="hero-headline">Quality Plants<br/><em>Come From</em> Chiguru</h1>
+      <p class="hero-tagline">One plant planted around a space can make the surrounding<br/>beautiful and your life happier</p>
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <span class="stat-num" data-target="10000">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Plants Sold</span>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Esteemed Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus"></span>
+          <span class="stat-label">Services</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Our <em>Green</em> Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-index="1">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap"><span class="card-icon">🎁</span></div>
+        <div class="card-number">01</div>
+        <h3 class="card-title">Plant Gifting</h3>
+        <p class="card-desc">Turn every occasion into a green memory. We craft personalised plant gifts for every milestone.</p>
+        <ul class="card-features">
+          <li><span class="feat-dot"></span>Return Gifts &amp; Corporate Gifts</li>
+          <li><span class="feat-dot"></span>Event Branding &amp; Customisation</li>
+          <li><span class="feat-dot"></span>Bonsais &amp; Exotic Orchids</li>
+          <li><span class="feat-dot"></span>Birthdays, Anniversaries, Conferences</li>
+        </ul>
+        <div class="card-tag-row">
+          <span class="tag">🌸 Orchids</span>
+          <span class="tag">🌳 Bonsai</span>
+          <span class="tag">🎀 Branded</span>
+        </div>
+      </div>
+      <div class="service-card featured" data-index="2">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap"><span class="card-icon">🪴</span></div>
+        <div class="card-number">02</div>
+        <h3 class="card-title">Bulk Plant Supply</h3>
+        <p class="card-desc">Premium indoor and outdoor plants in bulk — for offices, hotels, events and spaces that need life.</p>
+        <ul class="card-features">
+          <li><span class="feat-dot"></span>Indoor &amp; Outdoor Plants</li>
+          <li><span class="feat-dot"></span>FRP Planters &amp; Ceramic Pots</li>
+          <li><span class="feat-dot"></span>Bulk Orders on Request</li>
+          <li><span class="feat-dot"></span>Event Catering &amp; Installations</li>
+        </ul>
+        <div class="card-tag-row">
+          <span class="tag">🏢 Corporate</span>
+          <span class="tag">📦 Bulk</span>
+          <span class="tag">🏺 Planters</span>
+        </div>
+      </div>
+      <div class="service-card" data-index="3">
+        <div class="card-glow"></div>
+        <div class="card-icon-wrap"><span class="card-icon">🌳</span></div>
+        <div class="card-number">03</div>
+        <h3 class="card-title">Landscapes &amp; Lawns</h3>
+        <p class="card-desc">We transform outdoor spaces into lush green sanctuaries — from residential lawns to grand event fields.</p>
+        <ul class="card-features">
+          <li><span class="feat-dot"></span>Lawn Laying &amp; Landscaping</li>
+          <li><span class="feat-dot"></span>Fertilisers &amp; Field Care</li>
+          <li><span class="feat-dot"></span>Outdoor Plant Supply</li>
+          <li><span class="feat-dot"></span>All Types of Events</li>
+        </ul>
+        <div class="card-tag-row">
+          <span class="tag">🌾 Lawns</span>
+          <span class="tag">🌿 Fields</span>
+          <span class="tag">🎪 Events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <span class="section-tag">Our Work</span>
+      <h2 class="section-title">Photo <em>Gallery</em></h2>
+    </div>
+
+    <div class="gallery-categories">
+
+      <div class="gallery-category">
+        <h3 class="gallery-cat-title">🌸 Orchids</h3>
         <div class="gallery-grid">
-          <div class="gallery-item-hw">
-            <img src="./images/Saplings New.jpeg" alt="Gallery Photo 1" />
-          </div>
-          <div class="gallery-item-hw">
-            <img src="./images/Chiguru.jpeg" alt="Gallery Photo 2" />
+          <div class="gallery-item">
+            <img src="./images/orchids.jpeg" alt="Orchid Collection" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="./images/Chiguru (21-07).jpeg" alt="Gallery Photo 3" />
+            <img src="./images/orchid-on-window 1.png" alt="Purple Orchids" loading="lazy" />
           </div>
         </div>
       </div>
 
-      <!-- Social Media Section -->
-      <div class="social-media-section">
-        <p class="social-media-text">Follow Us On</p>
-        <div class="social-media-icons">
-          <a href="https://www.instagram.com/chiguru_greens?igsh=MTcyYnhheXdndmJsNw==" class="social-link instagram" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="mailto:chigurugreens@gmail.com" class="social-link email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://wa.me/919449280481" class="social-link whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+      <div class="gallery-category">
+        <h3 class="gallery-cat-title">🎁 Plant Gifting</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./images/radisson gift.jpeg" alt="Radisson Gift Plant" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/mysuru gift.jpeg" alt="Branded Gift Plant" loading="lazy" />
+          </div>
         </div>
       </div>
 
-      <!-- Map -->
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3898.3409723958093!2d76.64638397506508!3d12.292809287963669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDE3JzM0LjEiTiA3NsKwMzgnNTYuMyJF!5e0!3m2!1sen!2sin!4v1771853961165!5m2!1sen!2sin"
-          width="600" height="450" style="border: 0"
-          allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="location"
-        ></iframe>
+      <div class="gallery-category">
+        <h3 class="gallery-cat-title">🌳 Outdoor &amp; Landscapes</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./images/landscapes.jpeg" alt="Outdoor Landscape" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/landscape2.png" alt="Garden Plants" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-category">
+        <h3 class="gallery-cat-title">🪴 Indoor Plants</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./images/bonsai.png" alt="Indoor Plant" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/bonsai2.png" alt="Indoor Arrangement" loading="lazy" />
+          </div>
+        </div>
       </div>
 
     </div>
-    <!-- /#main-container -->
-  </body>
+  </section>
+
+  <!-- CLIENTS SECTION -->
+  <section class="clients" id="clients">
+    <div class="section-header">
+      <span class="section-tag">Trusted By</span>
+      <h2 class="section-title">Our <em>Esteemed</em> Clients</h2>
+    </div>
+    <div class="clients-track-wrap">
+      <div class="clients-track" id="clientsTrack">
+        <div class="client-chip">🏨 Radisson Blu</div>
+        <div class="client-chip">🏭 Page Industries</div>
+        <div class="client-chip">⛳ Golf Club</div>
+        <div class="client-chip">🏦 Bank of Baroda</div>
+        <div class="client-chip">🏦 Canara Bank</div>
+        <div class="client-chip">🏢 Reckitt Benckiser Ltd</div>
+        <div class="client-chip">🏨 Radisson Blu</div>
+        <div class="client-chip">🏭 Page Industries</div>
+        <div class="client-chip">⛳ Golf Club</div>
+        <div class="client-chip">🏦 Bank of Baroda</div>
+        <div class="client-chip">🏦 Canara Bank</div>
+        <div class="client-chip">🏢 Reckitt Benckiser Ltd</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact <em>Us</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+919449280481" class="contact-value">+91 94492 80481</a>
+          <span class="contact-name">Mrs. Premalatha</span>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <span class="contact-label">Email</span>
+          <a href="mailto:chiguruplants@gmail.com" class="contact-value contact-email">chiguruplants@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div class="contact-info">
+          <span class="contact-label">Location</span>
+          <span class="contact-value small">No. 2409, 1st Cross, Hosa Bandikeri,<br/>Nanjumalige Circle, Mysore</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <a href="tel:+919449280481" class="cta-btn green">Call Now</a>
+      <a href="mailto:chiguruplants@gmail.com" class="cta-btn outline">Send Email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <span class="footer-kannada">ಚಿಗುರು</span>®
+    </div>
+    <p class="footer-tagline">ಹಸಿರಿನೆಡೆಗೆ ಒಂದು ಹೆಜ್ಜೆ</p>
+    <p class="footer-copy">© 2024 Chiguru. All rights reserved. · Mysore, Karnataka</p>
+  </footer>
+
+</body>
 </html>
