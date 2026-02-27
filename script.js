@@ -105,18 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-  // ── 6. LOGO SPIN ON CLICK ──────────────────────────────────
-  const emblem = document.querySelector('.logo-emblem');
-  if (emblem) {
-    emblem.addEventListener('click', () => {
-      emblem.style.transition = 'transform 0.8s cubic-bezier(0.34,1.56,0.64,1)';
-      emblem.style.transform = 'rotate(360deg) scale(1.1)';
-      setTimeout(() => {
-        emblem.style.transform = '';
-        setTimeout(() => { emblem.style.transition = ''; }, 800);
-      }, 800);
-    });
-  }
-
 });

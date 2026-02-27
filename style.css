@@ -26,34 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ---- BACKGROUND LEAVES ---- */
-.bg-leaves {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-.bg-leaf {
-  position: absolute;
-  font-size: clamp(60px, 10vw, 140px);
-  opacity: 0.03;
-  animation: leafDrift 18s ease-in-out infinite;
-  user-select: none;
-}
-.bl1 { top: 5%;  left: -3%;  animation-delay: 0s;  animation-duration: 20s; }
-.bl2 { top: 20%; right: -2%; animation-delay: 3s;  animation-duration: 17s; }
-.bl3 { top: 45%; left: 2%;   animation-delay: 6s;  animation-duration: 22s; }
-.bl4 { top: 65%; right: -3%; animation-delay: 9s;  animation-duration: 19s; }
-.bl5 { top: 80%; left: -2%;  animation-delay: 12s; animation-duration: 21s; }
-.bl6 { top: 90%; right: 5%;  animation-delay: 2s;  animation-duration: 16s; }
-
-@keyframes leafDrift {
-  0%, 100% { transform: translateY(0) rotate(-5deg) scale(1); }
-  33%       { transform: translateY(-30px) rotate(5deg) scale(1.05); }
-  66%       { transform: translateY(15px) rotate(-3deg) scale(0.97); }
-}
-
 /* ---- SECTION BASE ---- */
 section { position: relative; z-index: 1; }
 
@@ -125,24 +97,23 @@ section { position: relative; z-index: 1; }
   box-shadow: var(--shadow-sm);
   animation: fadeDown 0.8s ease both;
 }
+
+/* ---- LOGO ---- */
 .hero-logo { animation: fadeDown 0.9s 0.1s ease both; }
 .logo-emblem {
-  width: clamp(80px, 14vw, 130px);
-  height: clamp(80px, 14vw, 130px);
-  background: var(--white);
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 0 0 4px rgba(26,74,14,0.15);
-  animation: emblemPulse 4s ease-in-out infinite;
-  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 10px;
 }
-@keyframes emblemPulse {
-  0%, 100% { box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 0 0 4px rgba(26,74,14,0.15); }
-  50%       { box-shadow: 0 8px 36px rgba(0,0,0,0.18), 0 0 0 8px rgba(26,74,14,0.1); }
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
-.logo-img { width: 200px; height: 200px; object-fit: contain; border-radius: 50%; }
 
 .hero-headline {
   font-family: 'Noto Sans Kannada', sans-serif;
