@@ -1,108 +1,124 @@
-/* ============================================================
-   CHIGURU — script.js
-   ============================================================ */
+// ==================== CONTACT FUNCTIONS ====================
 
-document.addEventListener('DOMContentLoaded', () => {
+// ==================== CONTACT FORM ====================
 
-  // ── 1. ANIMATED COUNTER ────────────────────────────────────
-  const statNums = document.querySelectorAll('.stat-num');
-  const formatNum = (n, target) => target >= 1000 ? n.toLocaleString('en-IN') : n;
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
 
-  const animateCounter = (el) => {
-    const target = parseInt(el.dataset.target, 10);
-    const duration = target >= 1000 ? 2000 : 1000;
-    const startTime = performance.now();
-    const step = (currentTime) => {
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 4);
-      el.textContent = formatNum(Math.round(eased * target), target);
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = formatNum(target, target);
-    };
-    requestAnimationFrame(step);
-  };
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        statNums.forEach(el => animateCounter(el));
-        statsObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.5 });
+    const name    = form.querySelector('input[name="name"]').value.trim();
+    const email   = form.querySelector('input[name="email"]').value.trim();
+    const phone   = form.querySelector('input[name="phone"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
 
-  const heroStats = document.querySelector('.hero-stats');
-  if (heroStats) statsObserver.observe(heroStats);
+    const checkedServices = Array.from(
+      form.querySelectorAll('input[name="service"]:checked')
+    ).map((cb) => cb.value);
 
+    if (checkedServices.length === 0) {
+      alert("Please select at least one service.");
+      return;
+    }
 
-  // ── 2. SCROLL REVEAL ───────────────────────────────────────
-  const revealEls = [
-    ...document.querySelectorAll('.service-card'),
-    ...document.querySelectorAll('.contact-card'),
-    ...document.querySelectorAll('.section-header'),
-    ...document.querySelectorAll('.client-chip'),
-  ];
+    const text =
+`Hello! I'm interested in your services.
 
-  revealEls.forEach(el => el.classList.add('reveal'));
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Services: ${checkedServices.join(", ")}
+Message: ${message || "N/A"}`;
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const idx = [...entry.target.parentElement.children].indexOf(entry.target);
-        entry.target.style.transitionDelay = `${idx * 80}ms`;
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+    const phoneNumber = "917406051534";
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`,
+      "_blank"
+    );
 
-  revealEls.forEach(el => revealObserver.observe(el));
-
-
-  // ── 3. SERVICE CARD TILT ───────────────────────────────────
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const rotateX = ((e.clientY - rect.top  - rect.height / 2) / (rect.height / 2)) * -5;
-      const rotateY = ((e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2)) *  5;
-      card.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    form.reset();
   });
-
-
-  // ── 4. CLIENTS TRACK PAUSE ON HOVER ────────────────────────
-  const track = document.getElementById('clientsTrack');
-  if (track) {
-    track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
-    track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
-  }
-
-
-  // ── 5. CONTACT CARD RIPPLE ─────────────────────────────────
-  const rippleStyle = document.createElement('style');
-  rippleStyle.textContent = `@keyframes rippleAnim { to { transform: scale(1); opacity: 0; } }`;
-  document.head.appendChild(rippleStyle);
-
-  document.querySelectorAll('.contact-card').forEach(card => {
-    card.addEventListener('click', function (e) {
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height) * 1.5;
-      const ripple = document.createElement('span');
-      ripple.style.cssText = `
-        position:absolute; border-radius:50%; pointer-events:none;
-        left:${e.clientX - rect.left - size / 2}px;
-        top:${e.clientY - rect.top - size / 2}px;
-        width:${size}px; height:${size}px;
-        background:rgba(26,74,14,0.1);
-        transform:scale(0);
-        animation:rippleAnim 0.6s ease-out forwards;
-      `;
-      this.style.position = 'relative';
-      this.style.overflow = 'hidden';
-      this.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 700);
-    });
-  });
-
 });
+
+function makeCall(phoneNumber) {
+  window.location.href = `tel:${phoneNumber}`;
+}
+
+function openWhatsApp(phoneNumber, contactName) {
+  const message = `Hello ${contactName}! I would like to get in touch with you.`;
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+}
+
+function shareCard() {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Shreyas Ramapriya - Business Head",
+        text: "Check out Shreyas Ramapriya's digital business card!",
+        url: window.location.href,
+      })
+      .catch((err) => console.log("Error sharing:", err));
+  } else {
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        alert("Link copied to clipboard! Share it with others.");
+      })
+      .catch(() => {
+        alert(
+          "Unable to share. Please copy the URL manually: " +
+            window.location.href
+        );
+      });
+  }
+}
+
+function saveContactModern() {
+  const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Shreyas
+TITLE:Business Head
+TEL;TYPE=CELL:96206 09089
+X-WHATSAPP;TYPE=CELL:919620609089
+END:VCARD`;
+
+  const blob = new Blob([vCardData], { type: "text/vcard" });
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Shreyas Ramapriya.vcf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(url);
+
+  const btn = document.querySelector(".save-contact-modern");
+  const originalHTML = btn.innerHTML;
+  btn.innerHTML = '<i class="fas fa-check"></i> Contact Saved!';
+  btn.style.background = "#4ade80";
+  btn.style.borderColor = "#4ade80";
+  btn.style.color = "white";
+
+  setTimeout(() => {
+    btn.innerHTML = originalHTML;
+    btn.style.background = "";
+    btn.style.borderColor = "";
+    btn.style.color = "";
+  }, 2000);
+}
+
+// ==================== SERVICE ENQUIRY ====================
+
+function enquireService(serviceName) {
+  const phoneNumber = "919620609089";
+  const message = `Hello! I'm interested in knowing more about your ${serviceName} services. Could you please provide me with more details?`;
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+}
