@@ -1,231 +1,400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chiguru — Quality Plants</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@700&display=swap" rel="stylesheet"/>
-  <script src="script.js" defer></script>
-</head>
-<body>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="brand-badge">Est. June 2024 · Mysore</div>
-      <div class="hero-logo">
-        <div class="logo-emblem">
-          <img src="./images/logo.png" alt="Chiguru Logo" class="logo-img" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDYASHREE S</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Modern Contact Card -->
+      <div class="modern-contact-card">
+        <!-- Top Header -->
+        <div class="card-header">
+          <div class="header-left">
+            <div class="header-info">
+              <h1 class="header-title">VIDYASHREE S</h1>
+              <p class="header-subtitle">KORI LAW ASSOCIATES</p>
+            </div>
+          </div>
+          <button class="share-btn" onclick="shareCard()">
+            <i class="fas fa-share-alt"></i>
+          </button>
         </div>
-      </div>
-      <h1 class="hero-headline hero-kannada">ಹಸಿರಿನೆಡೆಗೆ ಒಂದು ಹೆಜ್ಜೆ</h1>
-      <div class="hero-stats">
-        <div class="stat-pill">
-          <span class="stat-num" data-target="10000">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Plants Sold</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SERVICES SECTION -->
-  <section class="services" id="services">
-    <div class="section-header">
-      <span class="section-tag">What We Offer</span>
-      <h2 class="section-title">Our <em>Green</em> Services</h2>
-    </div>
-    <div class="services-grid">
-
-      <div class="service-card" data-index="1">
-        <div class="card-glow"></div>
-        <div class="card-icon-wrap"><span class="card-icon">🎁</span></div>
-        <div class="card-number">01</div>
-        <h3 class="card-title">Plant Gifting</h3>
-        <p class="card-desc">Turn every occasion into a lasting green memory with our thoughtfully curated plant gifts for corporate and personal milestones.</p>
-        <ul class="card-features">
-          <li><span class="feat-dot"></span>Corporate Gift &amp; Branding</li>
-          <li><span class="feat-dot"></span>Bonsais &amp; Exotic Orchids</li>
-          <li><span class="feat-dot"></span>Customised Return Gifts for Birthdays, Anniversaries, Conferences, Housewarming Ceremonies & inaugurations</li>
-        </ul>
-      </div>
-
-      <div class="service-card featured" data-index="2">
-        <div class="card-glow"></div>
-        <div class="card-icon-wrap"><span class="card-icon">🪴</span></div>
-        <div class="card-number">02</div>
-        <h3 class="card-title">Indoor &amp; Outdoor Plants</h3>
-        <p class="card-desc">We supply premium quality plants and planters tailored for offices, resorts, and corporate spaces that deserve to feel alive.</p>
-        <ul class="card-features">
-          <li><span class="feat-dot"></span>Premium Bulk Supply of Indoor & Outdoor Plants</li>
-          <li><span class="feat-dot"></span>FRP Planters &amp; Ceramics</li>
-        </ul>
-      </div>
-
-      <div class="service-card" data-index="3">
-        <div class="card-glow"></div>
-        <div class="card-icon-wrap"><span class="card-icon">🌳</span></div>
-        <div class="card-number">03</div>
-        <h3 class="card-title">Landscapes &amp; Lawns</h3>
-        <p class="card-desc">We design and maintain lush green landscapes for corporate campuses, resorts, and event venues — creating spaces that leave a lasting impression.</p>
-        <ul class="card-features">
-          <li><span class="feat-dot"></span>Lawn Laying &amp; Landscaping</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- GALLERY SECTION -->
-  <section class="gallery" id="gallery">
-    <div class="section-header">
-      <span class="section-tag">Our Work</span>
-      <h2 class="section-title">Photo <em>Gallery</em></h2>
-    </div>
-    <div class="gallery-categories">
-
-      <div class="gallery-category">
-        <h3 class="gallery-cat-title">🎁 Plant Gifting</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="./images/gift n1.jpeg" alt="Gift Plant" loading="lazy" />
-          </div>
-          <div class="gallery-item">
-            <img src="./images/gift n2.jpeg" alt="Gift Plant" loading="lazy" />
-          </div>
-          <div class="gallery-item">
-            <img src="./images/radisson gift.jpeg" alt="Radisson Gift Plant" loading="lazy" />
-          </div>
-          <div class="gallery-item">
-            <img src="./images/mysuru gift.jpeg" alt="Mysuru Gift Plant" loading="lazy" />
+        <!-- Banner Section -->
+        <div class="banner-section">
+          <img
+            src="./images/background.png"
+            alt="Background"
+            class="banner-bg"
+          />
+          <div class="banner-overlay">
+            <img
+              src="./images/RaviKiran.png"
+              alt="Profile"
+              class="banner-logo"
+            />
+            <h2 class="banner-title">VIDYASHREE S - Advocate</h2>
           </div>
         </div>
-      </div>
 
-      <div class="gallery-category">
-        <h3 class="gallery-cat-title">🌸 Orchids</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="./images/orchids.jpeg" alt="Orchid Collection" loading="lazy" />
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="call-btn" onclick="makeCall('7338453067')">
+            <i class="fas fa-phone"></i> VIDYASHREE S
+          </button>
+          <button
+            class="whatsapp-btn"
+            onclick="openWhatsApp('917338453067', 'VIDYASHREE S')"
+          >
+            <i class="fab fa-whatsapp"></i> VIDYASHREE S
+          </button>
+        </div>
+
+        <!-- Save Contact -->
+        <div class="save-contact-wrapper">
+          <button class="save-contact-modern" onclick="saveContactModern()">
+            <i class="fas fa-download"></i> Save Contact
+          </button>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+          <div class="about-header">
+            <i class="fas fa-user"></i>
+            <h3>About Me</h3>
           </div>
-          <div class="gallery-item">
-            <img src="./images/orchid-on-window 1.png" alt="Purple Orchids" loading="lazy" />
+          <!-- FIX: was <We class="about-text"> ... </p> (invalid tag) -->
+          <p class="about-text">
+            Hello, I am Vidyashree S, Founder of Kori Law Associates. Our
+            mission is to deliver justice with compassion and strength, with a
+            dedicated focus on empowering women and safeguarding the rights of
+            children. At Kori Law Associates, we handle civil matters with
+            integrity, care, and a deep understanding of the legal system. We
+            have supported numerous clients through challenging legal
+            situations, ensuring their voices are heard and their rights are
+            protected at every step. Our approach is built on trust,
+            transparency, and genuine commitment, where each case is handled
+            with precision and personal attention. We believe legal support
+            should do more than resolve disputes — it should give people
+            confidence, clarity, and control over their future. When you choose
+            us, you can expect a supportive, approachable, and result-driven
+            team that stands firmly with you in your pursuit of justice.
+          </p>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+          <div class="team-header">
+            <i class="fas fa-users"></i>
+            <h3>Faces Behind KORI LAW ASSOCIATES</h3>
+          </div>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-avatar">
+                <img
+                  src="./images/bhavana animated 1.png"
+                  alt="Vidyashree S"
+                />
+              </div>
+              <h4 class="member-name">Vidyashree S</h4>
+              <p class="member-role">Advocate</p>
+            </div>
           </div>
         </div>
       </div>
+      <!-- /.modern-contact-card -->
 
-      <div class="gallery-category">
-        <h3 class="gallery-cat-title">🌳 Outdoor &amp; Landscapes</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="./images/landscapes.jpeg" alt="Outdoor Landscape" loading="lazy" />
+      <!-- Services Section -->
+      <div class="services-section">
+        <div class="services-header">
+          <i class="fas fa-briefcase"></i>
+          <h3>Our Services</h3>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <img
+              src="./images/Property & Real Estate Matters.png"
+              alt="Property & Real Estate Matters"
+              class="service-img"
+            />
+            <p class="service-title">Property & Real Estate Matters</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Property & Real Estate Matters')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
           </div>
-          <div class="gallery-item">
-            <img src="./images/outdoor 1.png" alt="Outdoor Landscape" loading="lazy" />
+          <div class="service-card">
+            <img
+              src="./images/Contracts & Agreements.png"
+              alt="Contracts & Agreements"
+              class="service-img"
+            />
+            <p class="service-title">Contracts & Agreements</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Contracts & Agreements')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Money & Recovery Cases.png"
+              alt="Money & Recovery Cases"
+              class="service-img"
+            />
+            <p class="service-title">Money & Recovery Cases</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Money & Recovery Cases')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Civil Rights & Protection.png"
+              alt="Civil Rights & Protection"
+              class="service-img"
+            />
+            <p class="service-title">Civil Rights & Protection</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Civil Rights & Protection')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Business & Commercial Disputes.png"
+              alt="Business & Commercial Disputes"
+              class="service-img"
+            />
+            <p class="service-title">Business & Commercial Disputes</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Business & Commercial Disputes')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
+          </div>
+          <div class="service-card">
+            <img
+              src="./images/Legal Documentation & Consultation.png"
+              alt="Legal Documentation & Consultation"
+              class="service-img"
+            />
+            <p class="service-title">Legal Documentation & Consultation</p>
+            <button
+              class="service-whatsapp-btn"
+              onclick="enquireService('Legal Documentation & Consultation')"
+            >
+              <i class="fab fa-whatsapp"></i> Enquire Now
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="gallery-category">
-        <h3 class="gallery-cat-title">🪴 Indoor Plants</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="./images/indoor 1.png" alt="Indoor Plant" loading="lazy" />
+      <!-- Why Choose Us Section -->
+      <div class="why-choose-section">
+        <div class="why-choose-header">
+          <i class="fas fa-star"></i>
+          <h3>Why Choose KORI LAW ASSOCIATES ?</h3>
+        </div>
+        <div class="why-choose-list">
+          <div class="why-item">
+            <div class="why-image">
+              <img
+                src="./images/Client-Centered Approach.png"
+                alt="Client-Centered Approach"
+              />
+            </div>
+            <div class="why-content">
+              <h4>Client-Centered Approach</h4>
+              <p>
+                Every case is handled with personal attention, ensuring your voice is heard and valued.
+              </p>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="./images/indoor 2.png" alt="Indoor Plant" loading="lazy" />
+          <div class="why-item">
+            <div class="why-image">
+              <img src="./images/Focused on Women & Child Rights.png" alt="Focused on Women & Child Rights" />
+            </div>
+            <div class="why-content">
+              <h4>Focused on Women & Child Rights</h4>
+              <p>
+                Dedicated legal support with a compassionate yet firm approach to protecting rights.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-image">
+              <img
+                src="./images/Accessible in Tier 2 & Rural Areas.png"
+                alt="Accessible in Tier 2 & Rural Areas"
+              />
+            </div>
+            <div class="why-content">
+              <h4>Accessible in Tier 2 & Rural Areas</h4>
+              <p>
+                Bringing reliable legal support closer to communities in smaller cities and villages, where it's needed the most.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-image">
+              <img src="./images/Affordable & Fair Pricing.png" alt="Affordable & Fair Pricing" />
+            </div>
+            <div class="why-content">
+              <h4>Affordable & Fair Pricing</h4>
+              <p>Quality legal services that are accessible, without compromising on dedication or results.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      
-      <div class="gallery-category">
-        <h3 class="gallery-cat-title">🎍 Bonsai</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="./images/bonsai.jpeg" alt="Bonsai Plant" loading="lazy" />
-          </div>
-          <div class="gallery-item">
-            <img src="./images/bonsai 1.png" alt="Bonsai Plant" loading="lazy" />
-          </div>
+      <!-- Contact Form Section -->
+      <!-- FIX: removed orphaned .contact-form-inner wrapper (single child, no layout purpose) -->
+      <div class="contact-form-section">
+        <div class="contact-form-left">
+          <h2>Let's Work Together</h2>
+          <p>Tell us about your project. We'll respond within 24 hours.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="cf-group">
+              <label>Name <span class="req">*</span></label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="cf-row">
+              <div class="cf-group">
+                <label>Email <span class="req">*</span></label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="cf-group">
+                <label>Phone <span class="req">*</span></label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="cf-group">
+              <label
+                >Services <span class="req">*</span>
+                <small>(Select one or more)</small></label
+              >
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc1"
+                    name="service"
+                    value="Branding & Design"
+                  />
+                  <label for="svc1">Property & Real Estate Matters</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc2"
+                    name="service"
+                    value="Business Consulting"
+                  />
+                  <label for="svc2">Contracts & Agreements</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc3"
+                    name="service"
+                    value="Digital Marketing"
+                  />
+                  <label for="svc3">Money & Recovery Cases</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc4"
+                    name="service"
+                    value="Custom Software Solution"
+                  />
+                  <label for="svc4">Civil Rights & Protection</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc5"
+                    name="service"
+                    value="Web & App Development"
+                  />
+                  <label for="svc5">Business & Commercial Disputes</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="svc6"
+                    name="service"
+                    value="Business Automation Training"
+                  />
+                  <label for="svc6">Legal Documentation & Consultation</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="cf-group">
+              <label>Message</label>
+              <textarea
+                name="message"
+                placeholder="Brief message (optional)"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="cf-submit-btn">
+              <i class="fab fa-whatsapp"></i> Send Inquiry via WhatsApp
+            </button>
+          </form>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- CLIENTS SECTION -->
-  <section class="clients" id="clients">
-    <div class="section-header">
-      <span class="section-tag">Trusted By</span>
-      <h2 class="section-title">Our <em>Esteemed</em> Clients</h2>
-    </div>
-    <div class="clients-track-wrap">
-      <div class="clients-track" id="clientsTrack">
-        <div class="client-chip">🏨 Radisson Blu</div>
-        <div class="client-chip">🏭 Page Industries</div>
-        <div class="client-chip">⛳ Jayachamaraja Wadiyar Golf Club</div>
-        <div class="client-chip">🏦 Bank of Baroda</div>
-        <div class="client-chip">🏦 Canara Bank</div>
-        <div class="client-chip">🏨 Radisson Blu</div>
-        <div class="client-chip">🏭 Page Industries</div>
-        <div class="client-chip">⛳ Jayachamaraja Wadiyar Golf Club</div>
-        <div class="client-chip">🏦 Bank of Baroda</div>
-        <div class="client-chip">🏦 Canara Bank</div>
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d344.6062273495691!2d76.64650027274062!3d12.263540338244056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6f2632232277%3A0x63fcff4c3924d9a6!2sBK&#39;S%20Solutions!5e0!3m2!1sen!2sin!4v1771336876899!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="location"
+        ></iframe>
       </div>
     </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact" id="contact">
-    <div class="section-header">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Contact <em>Us</em></h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-icon">📞</div>
-        <div class="contact-info">
-          <span class="contact-label">Phone</span>
-          <a href="tel:+919449280481" class="contact-value">+91 94492 80481</a>
-          <span class="contact-name">Mrs. Premalatha</span>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">✉️</div>
-        <div class="contact-info">
-          <span class="contact-label">Email</span>
-          <a href="mailto:chiguruplants@gmail.com" class="contact-value">chiguruplants@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">📍</div>
-        <div class="contact-info">
-          <span class="contact-label">Location</span>
-          <span class="contact-value small">No. 2409, 1st Cross, HosaBandikeri, Nanjumalige Circle, Mysore</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact-cta">
-
-      <a href="tel:+919449280481" class="cta-btn green">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.32 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call Now
-      </a>
-
-      <a href="https://wa.me/919449280481" target="_blank" class="cta-btn whatsapp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-        WhatsApp
-      </a>
-
-      <a href="mailto:chiguruplants@gmail.com" class="cta-btn outline">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Email Us
-      </a>
-
-    </div>
-  </section>
-
-</body>
+    <!-- /#main-container -->
+  </body>
 </html>
